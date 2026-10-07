@@ -8,6 +8,65 @@ let cache = {
   data: []
 };
 
+function getTodayDateString(d = new Date()) {
+  const day = String(d.getDate()).padStart(2, '0');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${day} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+function parseMatchDate(dateInput, now = new Date()) {
+  if (!dateInput) return null;
+  if (typeof dateInput === 'number') {
+    const d = new Date(dateInput);
+    return isNaN(d.getTime()) ? null : new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  if (dateInput instanceof Date) {
+    return new Date(dateInput.getFullYear(), dateInput.getMonth(), dateInput.getDate());
+  }
+  const str = String(dateInput).trim().toLowerCase();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+
+  if (str === 'today' || str === 'recent' || str.includes('today')) return today;
+  if (str === 'yesterday' || str.includes('yesterday')) return yesterday;
+
+  const clean = str.replace(/^[a-z]+,\s*/i, '').trim();
+  const m = clean.match(/^(\d{1,2})\s+([a-z]{3,})\s+(\d{4})/i);
+  if (m) {
+    const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+    const mon = months[m[2].slice(0, 3).toLowerCase()];
+    if (mon !== undefined) {
+      return new Date(parseInt(m[3], 10), mon, parseInt(m[1], 10));
+    }
+  }
+
+  const parsed = new Date(clean);
+  if (!isNaN(parsed.getTime())) {
+    return new Date(parsed.getFullYear(), parsed.getMonth(), parsed.getDate());
+  }
+  return null;
+}
+
+function isTodayOrYesterday(dateInput, now = new Date()) {
+  const matchDate = parseMatchDate(dateInput, now);
+  if (!matchDate) return false;
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const yesterdayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1).getTime();
+  const matchTime = matchDate.getTime();
+  return matchTime === todayStart || matchTime === yesterdayStart;
+}
+
+function isMatchCompleted(m) {
+  if (!m) return false;
+  if (m.isLive) return false;
+  const st = (m.status || '').toLowerCase();
+  const txt = (m.statusText || m.result || '').toLowerCase();
+  if (st === 'stumps' || st === 'tea' || st === 'lunch' || st === 'live') return false;
+  if (txt.includes('day ') || txt.includes('lead by') || txt.includes('trail by') || txt.includes('opt to') || txt.includes('chose to') || txt.includes('need ')) return false;
+  return txt.includes('won by') || txt.includes('tied') || txt.includes('drawn') || txt.includes('no result') || txt.includes('abandoned') || st === 'result' || m.state === 'COMPLETED' || m.status === 'RESULT';
+}
+
+
 // 100% ACCURATE ICC OFFICIAL RANKINGS
 const ICC_DATA = {
   TEST: {
@@ -403,440 +462,6 @@ const RECENT_MATCHES = [
         }
       ],
       "summary": "Shreyas Iyer smashed an exhilarating unbeaten century (102* off 43 balls) while Naman Dhir took 3/28 to power India to a dominant 8-wicket win over West Indies in the 1st T20I at Lucknow."
-    }
-  },
-  {
-    "id": "recent-uae-usa-cwc",
-    "country": "USA & UAE",
-    "format": "ODI",
-    "series": "129th Match • ICC Cricket World Cup League 2",
-    "date": "05 Oct 2026",
-    "venue": "Grand Prairie Stadium, Dallas, Texas",
-    "result": "United States of America won by 6 wkts",
-    "winnerName": "United States of America",
-    "loserName": "United Arab Emirates",
-    "team1": {
-      "name": "United Arab Emirates",
-      "score": "330-8",
-      "overs": "50.0",
-      "isWinner": false
-    },
-    "team2": {
-      "name": "United States of America",
-      "score": "332-4",
-      "overs": "48.5",
-      "isWinner": true
-    },
-    "potm": "Milind Kumar (116* off 84b)",
-    "scorecard": {
-      "team1Innings": [
-        {
-          "name": "Muhammad Shahdad",
-          "dismissal": "c Monank b Harmeet",
-          "runs": 114,
-          "balls": 122
-        },
-        {
-          "name": "Tanish Suri (wk)",
-          "dismissal": "b Harmeet",
-          "runs": 78,
-          "balls": 67
-        },
-        {
-          "name": "Aryansh Sharma",
-          "dismissal": "c Netravalkar b Harmeet",
-          "runs": 34,
-          "balls": 32
-        },
-        {
-          "name": "Vishnu Sukumaran",
-          "dismissal": "b Netravalkar",
-          "runs": 28,
-          "balls": 24
-        },
-        {
-          "name": "Rahul Chopra (c)",
-          "dismissal": "c Milind b van Schalkwyk",
-          "runs": 22,
-          "balls": 19
-        },
-        {
-          "name": "Basil Hameed",
-          "dismissal": "c & b Harmeet",
-          "runs": 19,
-          "balls": 15
-        },
-        {
-          "name": "Ali Naseer",
-          "dismissal": "not out",
-          "runs": 16,
-          "balls": 12
-        },
-        {
-          "name": "Aayan Afzal Khan",
-          "dismissal": "run out (Aaron Jones)",
-          "runs": 8,
-          "balls": 6
-        },
-        {
-          "name": "Junaid Siddique",
-          "dismissal": "not out",
-          "runs": 4,
-          "balls": 3
-        }
-      ],
-      "team1Bowling": [
-        {
-          "bowler": "Harmeet Singh",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "65",
-          "wickets": "4",
-          "econ": "6.50"
-        },
-        {
-          "bowler": "Saurabh Netravalkar",
-          "overs": "10.0",
-          "maidens": "1",
-          "runs": "58",
-          "wickets": "2",
-          "econ": "5.80"
-        },
-        {
-          "bowler": "Shadley van Schalkwyk",
-          "overs": "9.0",
-          "maidens": "0",
-          "runs": "54",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Jasdeep Singh",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "62",
-          "wickets": "0",
-          "econ": "7.75"
-        },
-        {
-          "bowler": "Nosthush Kenjige",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "68",
-          "wickets": "0",
-          "econ": "6.80"
-        },
-        {
-          "bowler": "Milind Kumar",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "21",
-          "wickets": "0",
-          "econ": "7.00"
-        }
-      ],
-      "team2Innings": [
-        {
-          "name": "Milind Kumar",
-          "dismissal": "not out",
-          "runs": 116,
-          "balls": 84
-        },
-        {
-          "name": "Shubham Ranjane",
-          "dismissal": "c Suri b Junaid",
-          "runs": 57,
-          "balls": 52
-        },
-        {
-          "name": "Saiteja Mukkamalla",
-          "dismissal": "b Basil Hameed",
-          "runs": 56,
-          "balls": 61
-        },
-        {
-          "name": "Monank Patel (c & wk)",
-          "dismissal": "c Shahdad b Junaid",
-          "runs": 38,
-          "balls": 41
-        },
-        {
-          "name": "Smit Patel",
-          "dismissal": "b Aayan Khan",
-          "runs": 31,
-          "balls": 29
-        },
-        {
-          "name": "Aaron Jones",
-          "dismissal": "not out",
-          "runs": 24,
-          "balls": 26
-        }
-      ],
-      "team2Bowling": [
-        {
-          "bowler": "Junaid Siddique",
-          "overs": "9.5",
-          "maidens": "0",
-          "runs": "62",
-          "wickets": "2",
-          "econ": "6.30"
-        },
-        {
-          "bowler": "Basil Hameed",
-          "overs": "9.0",
-          "maidens": "0",
-          "runs": "54",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Aayan Afzal Khan",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "58",
-          "wickets": "1",
-          "econ": "5.80"
-        },
-        {
-          "bowler": "Ali Naseer",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "55",
-          "wickets": "0",
-          "econ": "6.88"
-        },
-        {
-          "bowler": "Muhammad Jawadullah",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "60",
-          "wickets": "0",
-          "econ": "7.50"
-        },
-        {
-          "bowler": "Vishnu Sukumaran",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "41",
-          "wickets": "0",
-          "econ": "10.25"
-        }
-      ],
-      "summary": "Milind Kumar's magnificent unbeaten 116* off 84 balls led the USA to chase down 331 against UAE at Grand Prairie Stadium to win by 6 wickets."
-    }
-  },
-  {
-    "id": "recent-banch-engch-wcl",
-    "country": "England & Bangladesh",
-    "format": "T20",
-    "series": "6th Match • World Championship of Legends",
-    "date": "05 Oct 2026",
-    "venue": "Sharjah Cricket Stadium, Sharjah",
-    "result": "England Champions won by 7 wkts",
-    "winnerName": "England Champions",
-    "loserName": "Bangladesh Champions",
-    "team1": {
-      "name": "Bangladesh Champions",
-      "score": "164-9",
-      "overs": "20.0",
-      "isWinner": false
-    },
-    "team2": {
-      "name": "England Champions",
-      "score": "166-3",
-      "overs": "16.1",
-      "isWinner": true
-    },
-    "potm": "Ravi Bopara (50* off 28b & 1/18)",
-    "scorecard": {
-      "team1Innings": [
-        {
-          "name": "Rony Talukdar",
-          "dismissal": "c Mustard b Patel",
-          "runs": 44,
-          "balls": 30
-        },
-        {
-          "name": "Al-Amin Hossain",
-          "dismissal": "not out",
-          "runs": 31,
-          "balls": 19
-        },
-        {
-          "name": "Mohammad Ashraful",
-          "dismissal": "c Bell b Sidebottom",
-          "runs": 24,
-          "balls": 18
-        },
-        {
-          "name": "Imrul Kayes",
-          "dismissal": "b Patel",
-          "runs": 18,
-          "balls": 14
-        },
-        {
-          "name": "Naeem Islam",
-          "dismissal": "c Pietersen b Bopara",
-          "runs": 15,
-          "balls": 13
-        },
-        {
-          "name": "Nadif Chowdhury",
-          "dismissal": "b Patel",
-          "runs": 11,
-          "balls": 9
-        },
-        {
-          "name": "Elias Sunny",
-          "dismissal": "c Tremlett b Sidebottom",
-          "runs": 8,
-          "balls": 6
-        },
-        {
-          "name": "Abu Jayed",
-          "dismissal": "c Bell b Tremlett",
-          "runs": 4,
-          "balls": 5
-        },
-        {
-          "name": "Abdur Razzak",
-          "dismissal": "b Patel",
-          "runs": 3,
-          "balls": 4
-        },
-        {
-          "name": "Sohrawardi Shuvo",
-          "dismissal": "run out",
-          "runs": 2,
-          "balls": 2
-        }
-      ],
-      "team1Bowling": [
-        {
-          "bowler": "Samit Patel",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "25",
-          "wickets": "4",
-          "econ": "6.25"
-        },
-        {
-          "bowler": "Ryan Sidebottom",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "28",
-          "wickets": "2",
-          "econ": "7.00"
-        },
-        {
-          "bowler": "Ravi Bopara",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "18",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Chris Tremlett",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "32",
-          "wickets": "1",
-          "econ": "8.00"
-        },
-        {
-          "bowler": "Chris Schofield",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "31",
-          "wickets": "0",
-          "econ": "10.33"
-        },
-        {
-          "bowler": "Owais Shah",
-          "overs": "2.0",
-          "maidens": "0",
-          "runs": "28",
-          "wickets": "0",
-          "econ": "14.00"
-        }
-      ],
-      "team2Innings": [
-        {
-          "name": "Ravi Bopara",
-          "dismissal": "not out",
-          "runs": 50,
-          "balls": 28
-        },
-        {
-          "name": "Kevin Pietersen",
-          "dismissal": "c Ashraful b Jayed",
-          "runs": 38,
-          "balls": 22
-        },
-        {
-          "name": "Ian Bell",
-          "dismissal": "b Razzak",
-          "runs": 34,
-          "balls": 25
-        },
-        {
-          "name": "Phil Mustard (wk)",
-          "dismissal": "c Talukdar b Shuvo",
-          "runs": 25,
-          "balls": 15
-        },
-        {
-          "name": "Owais Shah",
-          "dismissal": "not out",
-          "runs": 14,
-          "balls": 7
-        }
-      ],
-      "team2Bowling": [
-        {
-          "bowler": "Abu Jayed",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "26",
-          "wickets": "1",
-          "econ": "8.67"
-        },
-        {
-          "bowler": "Abdur Razzak",
-          "overs": "3.1",
-          "maidens": "0",
-          "runs": "31",
-          "wickets": "1",
-          "econ": "9.79"
-        },
-        {
-          "bowler": "Sohrawardi Shuvo",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "29",
-          "wickets": "1",
-          "econ": "9.67"
-        },
-        {
-          "bowler": "Elias Sunny",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "35",
-          "wickets": "0",
-          "econ": "11.67"
-        },
-        {
-          "bowler": "Al-Amin Hossain",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "43",
-          "wickets": "0",
-          "econ": "10.75"
-        }
-      ],
-      "summary": "Samit Patel took 4/25 before Ravi Bopara's unbeaten 50* and Kevin Pietersen's 38 sealed an emphatic 7-wicket victory in 16.1 overs for England Champions."
     }
   }
 ];
@@ -1295,6 +920,129 @@ async function getRealLiveScores() {
   }
 }
 
+
+let recentCache = {
+  lastFetch: 0,
+  data: []
+};
+
+async function getOfficialCricinfoResults() {
+  const now = Date.now();
+  if (recentCache.data.length > 0 && (now - recentCache.lastFetch < 30000)) {
+    return recentCache.data;
+  }
+
+  try {
+    const res = await fetch('https://www.espncricinfo.com/live-cricket-match-results', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+    });
+    const html = await res.text();
+    const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    if (!m) return recentCache.data;
+
+    const data = JSON.parse(m[1]);
+    const allMatches = [];
+    function traverse(obj) {
+      if (!obj || typeof obj !== 'object') return;
+      if (obj.id && obj.teams && (obj.statusText || obj.result)) {
+        allMatches.push(obj);
+        return;
+      }
+      for (const key of Object.keys(obj)) {
+        traverse(obj[key]);
+      }
+    }
+    traverse(data.props?.appPageProps);
+
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const todayStr = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    const yesterday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1);
+    const yesterdayStr = `${yesterday.getFullYear()}-${pad(yesterday.getMonth() + 1)}-${pad(yesterday.getDate())}`;
+
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const todayFormatted = `${pad(d.getDate())} ${months[d.getMonth()]} ${d.getFullYear()}`;
+    const yesterdayFormatted = `${pad(yesterday.getDate())} ${months[yesterday.getMonth()]} ${yesterday.getFullYear()}`;
+
+    const validMatches = [];
+    const seen = new Set();
+
+    for (const match of allMatches) {
+      if (seen.has(String(match.id))) continue;
+      seen.add(String(match.id));
+
+      const s = match.startDate || '';
+      const e = match.endDate || '';
+      const txt = (match.statusText || match.status || '').toLowerCase();
+      const isFinished = txt.includes('won by') || txt.includes('tied') || txt.includes('drawn') || txt.includes('no result') || txt.includes('abandoned') || match.status === 'RESULT' || match.state === 'POST';
+      if (!isFinished) continue;
+
+      const isToday = s.startsWith(todayStr) || e.startsWith(todayStr);
+      const isYesterday = s.startsWith(yesterdayStr) || e.startsWith(yesterdayStr);
+
+      if (!isToday && !isYesterday) continue;
+
+      const t1 = match.teams?.[0] || {};
+      const t2 = match.teams?.[1] || {};
+      const t1Name = t1.team?.name || t1.team?.abbreviation || 'Team 1';
+      const t2Name = t2.team?.name || t2.team?.abbreviation || 'Team 2';
+
+      const wonMatch = (match.statusText || '').match(/^(.*?)\s+won\s+by\s+(.*)$/i);
+      const winnerName = wonMatch ? wonMatch[1].trim() : (t1Name || '');
+      const isT1Winner = winnerName.toLowerCase().includes(t1Name.toLowerCase());
+
+      let format = 'T20I';
+      const seriesLow = (match.series?.name || match.title || '').toLowerCase();
+      if (seriesLow.includes('test') || seriesLow.includes('4-day') || seriesLow.includes('ranji') || seriesLow.includes('national cricket league')) {
+        format = 'TEST';
+      } else if (seriesLow.includes('odi') || seriesLow.includes('one-day') || seriesLow.includes('pro50') || seriesLow.includes('league 2')) {
+        format = 'ODI';
+      } else if (seriesLow.includes('t20')) {
+        format = 'T20I';
+      }
+
+      validMatches.push({
+        id: String(match.id),
+        country: `${t1Name} & ${t2Name}`,
+        format: format,
+        series: match.series?.name ? `${match.series.name}${match.title ? ' • ' + match.title : ''}` : (match.title || 'Cricket Match'),
+        date: isToday ? todayFormatted : yesterdayFormatted,
+        isToday: isToday,
+        isYesterday: isYesterday,
+        venue: match.ground?.name ? `${match.ground.name}${match.ground.town?.name ? ', ' + match.ground.town.name : ''}` : 'International Stadium',
+        result: match.statusText || match.status || 'Match Completed',
+        winnerName: winnerName,
+        loserName: isT1Winner ? t2Name : t1Name,
+        team1: {
+          name: t1Name,
+          score: t1.score || '',
+          overs: t1.scoreInfo || '',
+          isWinner: isT1Winner
+        },
+        team2: {
+          name: t2Name,
+          score: t2.score || '',
+          overs: t2.scoreInfo || '',
+          isWinner: !isT1Winner
+        },
+        potm: match.lastWicket || 'Official Result',
+        scorecard: {
+          summary: `${match.statusText || ''} (${t1Name}: ${t1.score || '-'} vs ${t2Name}: ${t2.score || '-'})`,
+          keyBatters: `${t1Name}: ${t1.score || '-'} • ${t2Name}: ${t2.score || '-'}`,
+          keyBowlers: match.ground?.name || 'Match Completed'
+        }
+      });
+    }
+
+    recentCache.data = validMatches;
+    recentCache.lastFetch = now;
+    return validMatches;
+  } catch (e) {
+    console.error('Error fetching official results:', e.message);
+    return recentCache.data;
+  }
+}
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
 
@@ -1325,23 +1073,13 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  if (url.pathname === '/api/recent') {
+      if (url.pathname === '/api/recent') {
     const liveMatches = await getRealLiveScores();
+    const officialResults = await getOfficialCricinfoResults();
+    const todayDateStr = getTodayDateString();
+
     const liveCompleted = (liveMatches || [])
-      .filter(m => {
-        if (!m) return false;
-        if (m.isLive) return false;
-        const st = (m.status || '').toLowerCase();
-        const txt = (m.statusText || '').toLowerCase();
-        // Ignore in-progress states
-        if (st === 'stumps' || st === 'tea' || st === 'lunch' || st === 'live') return false;
-        if (txt.includes('day ') || txt.includes('lead by') || txt.includes('trail by') || txt.includes('opt to') || txt.includes('chose to') || txt.includes('need ')) return false;
-        // Must be completed result
-        if (m.state === 'COMPLETED' || m.status === 'RESULT') {
-          return txt.includes('won by') || txt.includes('tied') || txt.includes('drawn') || txt.includes('no result') || txt.includes('abandoned') || st === 'result';
-        }
-        return false;
-      })
+      .filter(m => isMatchCompleted(m))
       .map(m => {
         const txt = m.statusText || m.status || '';
         const wonMatch = txt.match(/^(.*?)\s+won\s+by\s+(.*)$/i);
@@ -1352,7 +1090,7 @@ const server = http.createServer(async (req, res) => {
           country: m.teams ? m.teams.map(t => t.name).join(' & ') : 'International',
           format: (m.series || '').toLowerCase().includes('t20') ? 'T20I' : ((m.series || '').toLowerCase().includes('odi') ? 'ODI' : 'TEST'),
           series: m.series || m.title,
-          date: 'Recent',
+          date: todayDateStr,
           venue: m.venue || 'Ground',
           result: m.statusText || m.status,
           winnerName: winnerName,
@@ -1378,41 +1116,56 @@ const server = http.createServer(async (req, res) => {
         };
       });
 
-    // Auto-persist: merge new completed matches into recent_history.json
-    let currentSaved = [...RECENT_MATCHES];
-    const storePath = path.join(__dirname, 'recent_history.json');
-    try {
-      if (fs.existsSync(storePath)) {
-        const stored = JSON.parse(fs.readFileSync(storePath, 'utf8'));
-        if (Array.isArray(stored) && stored.length > 0) currentSaved = stored;
+    // Start with rich curated recent matches
+    let merged = [...RECENT_MATCHES];
+
+    // Merge in liveCompleted and official results from Cricinfo
+    [...liveCompleted, ...officialResults].forEach(om => {
+      const omId = String(om.id);
+      const t1Norm = (om.team1?.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const t2Norm = (om.team2?.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      const alreadyIn = merged.some(m => {
+        if (String(m.id) === omId) return true;
+        const mt1 = (m.team1?.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const mt2 = (m.team2?.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if ((t1Norm.includes(mt1) || mt1.includes(t1Norm)) && (t2Norm.includes(mt2) || mt2.includes(t2Norm))) {
+          return true;
+        }
+        return false;
+      });
+
+      if (!alreadyIn) {
+        merged.push(om);
       }
+    });
+
+    // STRICT DATE FILTER:
+    // Only matches whose result has arrived AND strictly from Today or Yesterday!
+    // Any match older than yesterday (e.g. 2 days ago or older) is automatically purged.
+    merged = merged.filter(m => isMatchCompleted(m) && isTodayOrYesterday(m.date));
+
+    // Sort: Today matches first, then Yesterday matches. Within each day, prioritize India matches!
+    merged.sort((a, b) => {
+      const da = parseMatchDate(a.date) || new Date(0);
+      const db = parseMatchDate(b.date) || new Date(0);
+      if (db.getTime() !== da.getTime()) {
+        return db.getTime() - da.getTime();
+      }
+      const aInd = (a.country + a.series + a.team1.name + a.team2.name).toLowerCase().includes('ind');
+      const bInd = (b.country + b.series + b.team1.name + b.team2.name).toLowerCase().includes('ind');
+      if (aInd && !bInd) return -1;
+      if (!aInd && bInd) return 1;
+      return 0;
+    });
+
+    try {
+      const storePath = path.join(__dirname, 'recent_history.json');
+      fs.writeFileSync(storePath, JSON.stringify(merged, null, 2), 'utf8');
     } catch (e) {}
 
-    if (liveCompleted.length > 0) {
-      const merged = [...liveCompleted];
-      currentSaved.forEach(sm => {
-        const smId = String(sm.id);
-        const smNorm = (sm.series || sm.country || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-        const alreadyIn = merged.some(m => {
-          if (String(m.id) === smId) return true;
-          const mNorm = (m.series || m.country || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-          return smNorm && mNorm && (smNorm.includes(mNorm) || mNorm.includes(smNorm));
-        });
-        if (!alreadyIn) {
-          merged.push(sm);
-        }
-      });
-      // STRICT FIFO LIMIT: Exactly 4 matches! Any oldest match beyond 4 is removed!
-      currentSaved = merged.slice(0, 4);
-      try {
-        fs.writeFileSync(storePath, JSON.stringify(currentSaved, null, 2), 'utf8');
-      } catch (e) {}
-    }
-
-    // Return strictly top 4 most recent results
-    const allRecent = currentSaved.slice(0, 4);
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(allRecent));
+    res.end(JSON.stringify(merged));
     return;
   }
 

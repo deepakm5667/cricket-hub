@@ -22,10 +22,10 @@ async function updateIndex() {
   });
 
   // Extract datasets from server.js
-  const iccMatch = serverCode.match(/const ICC_DATA = ({[\s\S]*?});\n\n\/\/ 100% VERIFIED REAL RECENT/);
-  const recentMatch = serverCode.match(/const RECENT_MATCHES = (\[[\s\S]*?\]);\n\n\/\/ 100% VERIFIED REAL UPCOMING/);
-  const upcomingMatch = serverCode.match(/const UPCOMING_MATCHES = (\[[\s\S]*?\]);\n\n\/\/ IPL OFFICIAL DATA/);
-  const iplMatch = serverCode.match(/const IPL_DATA = ({[\s\S]*?});\n\n\/\/ Fetch real-time live/);
+  const iccMatch = serverCode.match(/const ICC_DATA = ({[\s\S]*?});\r?\n\r?\n(?:\/\/[^\r\n]*\r?\n)*const RECENT_MATCHES/);
+  const recentMatch = serverCode.match(/const RECENT_MATCHES = (\[[\s\S]*?\]);\r?\n\r?\n(?:\/\/[^\r\n]*\r?\n)*const UPCOMING_MATCHES/);
+  const upcomingMatch = serverCode.match(/const UPCOMING_MATCHES = (\[[\s\S]*?\]);\r?\n\r?\n(?:\/\/[^\r\n]*\r?\n)*const IPL_DATA/);
+  const iplMatch = serverCode.match(/const IPL_DATA = ({[\s\S]*?});\r?\n\r?\n(?:\/\/[^\r\n]*\r?\n)*\/\/ Fetch real-time live/);
 
   if (!iccMatch || !recentMatch || !upcomingMatch || !iplMatch) {
     console.error('Failed to extract datasets from server.js');

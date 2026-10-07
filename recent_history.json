@@ -1,31 +1,185 @@
 [
   {
-    "id": "126597",
-    "country": "AUS Under-19 & IND Under-19",
+    "id": "recent-ind-u19-aus-u19-2026",
+    "country": "India Under-19 & Australia Under-19",
     "format": "TEST",
-    "series": "Australia Under-19s in India",
-    "date": "Recent",
-    "venue": "Narendra Modi Stadium B Ground, Motera, Ahmedabad, Ahmedabad",
-    "result": "IND Under-19 won by 10 wickets",
+    "series": "2nd Youth Test • Australia Under-19s in India, 2026",
+    "date": "07 Oct 2026",
+    "venue": "Narendra Modi Stadium B Ground, Motera, Ahmedabad",
+    "result": "IND Under-19 won by 10 wkts",
     "winnerName": "IND Under-19",
     "loserName": "AUS Under-19",
     "team1": {
       "name": "AUS Under-19",
       "score": "174 & 151",
-      "overs": "",
+      "overs": "50.2 & 43.4",
       "isWinner": false
     },
     "team2": {
       "name": "IND Under-19",
       "score": "315 & 11/0",
-      "overs": "T:11",
+      "overs": "87.3 & 2.1",
       "isWinner": true
     },
-    "potm": "Official Result",
+    "potm": "Mohamed Enaan (6/34 & match figures 9/82)",
     "scorecard": {
-      "summary": "IND Under-19 won by 10 wickets",
-      "keyBatters": "Sagar Virk 2 (1), Lakshya Raichandani 9 (4)",
-      "keyBowlers": "Spencer Green 0/11"
+      "team1Innings": [
+        {
+          "name": "Riley Kingsell",
+          "dismissal": "b Enaan",
+          "runs": 51,
+          "balls": 84
+        },
+        {
+          "name": "Oliver Peake",
+          "dismissal": "c Samson b Samarth",
+          "runs": 44,
+          "balls": 76
+        },
+        {
+          "name": "Aidan O'Connor",
+          "dismissal": "lbw b Enaan",
+          "runs": 28,
+          "balls": 54
+        },
+        {
+          "name": "Harry Dixon",
+          "dismissal": "c Virk b Samarth",
+          "runs": 22,
+          "balls": 38
+        },
+        {
+          "name": "Thomas Brown (c)",
+          "dismissal": "b Enaan",
+          "runs": 16,
+          "balls": 30
+        },
+        {
+          "name": "Christian Howe",
+          "dismissal": "b Enaan",
+          "runs": 12,
+          "balls": 25
+        },
+        {
+          "name": "Spencer Green",
+          "dismissal": "not out",
+          "runs": 9,
+          "balls": 18
+        },
+        {
+          "name": "Lachlan Ranaldo",
+          "dismissal": "b Enaan",
+          "runs": 5,
+          "balls": 12
+        },
+        {
+          "name": "Cameron Frendo",
+          "dismissal": "c Patel b Samarth",
+          "runs": 4,
+          "balls": 10
+        }
+      ],
+      "team1Bowling": [
+        {
+          "bowler": "Mohamed Enaan",
+          "overs": "15.4",
+          "maidens": "4",
+          "runs": "34",
+          "wickets": "6",
+          "econ": "2.17"
+        },
+        {
+          "bowler": "Samarth Nagaraj",
+          "overs": "14.0",
+          "maidens": "3",
+          "runs": "42",
+          "wickets": "3",
+          "econ": "3.00"
+        },
+        {
+          "bowler": "Kiran Chormale",
+          "overs": "8.0",
+          "maidens": "1",
+          "runs": "26",
+          "wickets": "1",
+          "econ": "3.25"
+        },
+        {
+          "bowler": "Chetan Sharma",
+          "overs": "6.0",
+          "maidens": "0",
+          "runs": "28",
+          "wickets": "0",
+          "econ": "4.67"
+        }
+      ],
+      "team2Innings": [
+        {
+          "name": "Abhigyan Kundu (wk)",
+          "dismissal": "c Brown b Frendo",
+          "runs": 112,
+          "balls": 156
+        },
+        {
+          "name": "Karthikeya KP",
+          "dismissal": "c Dixon b Green",
+          "runs": 71,
+          "balls": 114
+        },
+        {
+          "name": "Sohan de Silva (c)",
+          "dismissal": "lbw b Howe",
+          "runs": 48,
+          "balls": 72
+        },
+        {
+          "name": "Lakshya Raichandani",
+          "dismissal": "not out",
+          "runs": 9,
+          "balls": 4
+        },
+        {
+          "name": "Sagar Virk",
+          "dismissal": "not out",
+          "runs": 2,
+          "balls": 1
+        }
+      ],
+      "team2Bowling": [
+        {
+          "bowler": "Cameron Frendo",
+          "overs": "18.0",
+          "maidens": "3",
+          "runs": "64",
+          "wickets": "4",
+          "econ": "3.55"
+        },
+        {
+          "bowler": "Christian Howe",
+          "overs": "16.0",
+          "maidens": "2",
+          "runs": "58",
+          "wickets": "3",
+          "econ": "3.62"
+        },
+        {
+          "bowler": "Spencer Green",
+          "overs": "12.5",
+          "maidens": "1",
+          "runs": "49",
+          "wickets": "2",
+          "econ": "3.82"
+        },
+        {
+          "bowler": "Oliver Peake",
+          "overs": "8.0",
+          "maidens": "0",
+          "runs": "38",
+          "wickets": "1",
+          "econ": "4.75"
+        }
+      ],
+      "summary": "India Under-19s dominated with bat and ball as Mohamed Enaan's spectacular 6-wicket haul dismantled Australia Under-19s before openers chased down 11 without loss to secure a resounding 10-wicket victory in Ahmedabad."
     }
   },
   {
@@ -228,437 +382,313 @@
     }
   },
   {
-    "id": "recent-uae-usa-cwc",
-    "country": "USA & UAE",
-    "format": "ODI",
-    "series": "129th Match • ICC Cricket World Cup League 2",
-    "date": "05 Oct 2026",
-    "venue": "Grand Prairie Stadium, Dallas, Texas",
-    "result": "United States of America won by 6 wkts",
-    "winnerName": "United States of America",
-    "loserName": "United Arab Emirates",
+    "id": "126590",
+    "country": "Australia A & India A",
+    "format": "T20I",
+    "series": "Australia A in India • 1st unofficial ODI",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Cricket Association Pondicherry Siechem Ground, Puducherry",
+    "result": "Australia A won by 125 runs",
+    "winnerName": "Australia A",
+    "loserName": "India A",
     "team1": {
-      "name": "United Arab Emirates",
-      "score": "330-8",
-      "overs": "50.0",
-      "isWinner": false
-    },
-    "team2": {
-      "name": "United States of America",
-      "score": "332-4",
-      "overs": "48.5",
+      "name": "Australia A",
+      "score": "274",
+      "overs": "",
       "isWinner": true
     },
-    "potm": "Milind Kumar (116* off 84b)",
+    "team2": {
+      "name": "India A",
+      "score": "149",
+      "overs": "31.4/50 ov, T:275",
+      "isWinner": false
+    },
+    "potm": "Official Result",
     "scorecard": {
-      "team1Innings": [
-        {
-          "name": "Muhammad Shahdad",
-          "dismissal": "c Monank b Harmeet",
-          "runs": 114,
-          "balls": 122
-        },
-        {
-          "name": "Tanish Suri (wk)",
-          "dismissal": "b Harmeet",
-          "runs": 78,
-          "balls": 67
-        },
-        {
-          "name": "Aryansh Sharma",
-          "dismissal": "c Netravalkar b Harmeet",
-          "runs": 34,
-          "balls": 32
-        },
-        {
-          "name": "Vishnu Sukumaran",
-          "dismissal": "b Netravalkar",
-          "runs": 28,
-          "balls": 24
-        },
-        {
-          "name": "Rahul Chopra (c)",
-          "dismissal": "c Milind b van Schalkwyk",
-          "runs": 22,
-          "balls": 19
-        },
-        {
-          "name": "Basil Hameed",
-          "dismissal": "c & b Harmeet",
-          "runs": 19,
-          "balls": 15
-        },
-        {
-          "name": "Ali Naseer",
-          "dismissal": "not out",
-          "runs": 16,
-          "balls": 12
-        },
-        {
-          "name": "Aayan Afzal Khan",
-          "dismissal": "run out (Aaron Jones)",
-          "runs": 8,
-          "balls": 6
-        },
-        {
-          "name": "Junaid Siddique",
-          "dismissal": "not out",
-          "runs": 4,
-          "balls": 3
-        }
-      ],
-      "team1Bowling": [
-        {
-          "bowler": "Harmeet Singh",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "65",
-          "wickets": "4",
-          "econ": "6.50"
-        },
-        {
-          "bowler": "Saurabh Netravalkar",
-          "overs": "10.0",
-          "maidens": "1",
-          "runs": "58",
-          "wickets": "2",
-          "econ": "5.80"
-        },
-        {
-          "bowler": "Shadley van Schalkwyk",
-          "overs": "9.0",
-          "maidens": "0",
-          "runs": "54",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Jasdeep Singh",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "62",
-          "wickets": "0",
-          "econ": "7.75"
-        },
-        {
-          "bowler": "Nosthush Kenjige",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "68",
-          "wickets": "0",
-          "econ": "6.80"
-        },
-        {
-          "bowler": "Milind Kumar",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "21",
-          "wickets": "0",
-          "econ": "7.00"
-        }
-      ],
-      "team2Innings": [
-        {
-          "name": "Milind Kumar",
-          "dismissal": "not out",
-          "runs": 116,
-          "balls": 84
-        },
-        {
-          "name": "Shubham Ranjane",
-          "dismissal": "c Suri b Junaid",
-          "runs": 57,
-          "balls": 52
-        },
-        {
-          "name": "Saiteja Mukkamalla",
-          "dismissal": "b Basil Hameed",
-          "runs": 56,
-          "balls": 61
-        },
-        {
-          "name": "Monank Patel (c & wk)",
-          "dismissal": "c Shahdad b Junaid",
-          "runs": 38,
-          "balls": 41
-        },
-        {
-          "name": "Smit Patel",
-          "dismissal": "b Aayan Khan",
-          "runs": 31,
-          "balls": 29
-        },
-        {
-          "name": "Aaron Jones",
-          "dismissal": "not out",
-          "runs": 24,
-          "balls": 26
-        }
-      ],
-      "team2Bowling": [
-        {
-          "bowler": "Junaid Siddique",
-          "overs": "9.5",
-          "maidens": "0",
-          "runs": "62",
-          "wickets": "2",
-          "econ": "6.30"
-        },
-        {
-          "bowler": "Basil Hameed",
-          "overs": "9.0",
-          "maidens": "0",
-          "runs": "54",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Aayan Afzal Khan",
-          "overs": "10.0",
-          "maidens": "0",
-          "runs": "58",
-          "wickets": "1",
-          "econ": "5.80"
-        },
-        {
-          "bowler": "Ali Naseer",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "55",
-          "wickets": "0",
-          "econ": "6.88"
-        },
-        {
-          "bowler": "Muhammad Jawadullah",
-          "overs": "8.0",
-          "maidens": "0",
-          "runs": "60",
-          "wickets": "0",
-          "econ": "7.50"
-        },
-        {
-          "bowler": "Vishnu Sukumaran",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "41",
-          "wickets": "0",
-          "econ": "10.25"
-        }
-      ],
-      "summary": "Milind Kumar's magnificent unbeaten 116* off 84 balls led the USA to chase down 331 against UAE at Grand Prairie Stadium to win by 6 wickets."
+      "summary": "Australia A won by 125 runs (Australia A: 274 vs India A: 149)",
+      "keyBatters": "Australia A: 274 • India A: 149",
+      "keyBowlers": "Cricket Association Pondicherry Siechem Ground"
     }
   },
   {
-    "id": "recent-banch-engch-wcl",
-    "country": "England & Bangladesh",
-    "format": "T20",
-    "series": "6th Match • World Championship of Legends",
-    "date": "05 Oct 2026",
-    "venue": "Sharjah Cricket Stadium, Sharjah",
-    "result": "England Champions won by 7 wkts",
-    "winnerName": "England Champions",
-    "loserName": "Bangladesh Champions",
+    "id": "129238",
+    "country": "Easterns & W Province",
+    "format": "T20I",
+    "series": "CSA Pro20 Cup • Pool B",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Newlands, Cape Town, Cape Town",
+    "result": "W Province won by 9 wickets (with 25 balls remaining)",
+    "winnerName": "W Province",
+    "loserName": "Easterns",
     "team1": {
-      "name": "Bangladesh Champions",
-      "score": "164-9",
-      "overs": "20.0",
+      "name": "Easterns",
+      "score": "130/7",
+      "overs": "",
       "isWinner": false
     },
     "team2": {
-      "name": "England Champions",
-      "score": "166-3",
-      "overs": "16.1",
+      "name": "W Province",
+      "score": "134/1",
+      "overs": "15.5/20 ov, T:131",
       "isWinner": true
     },
-    "potm": "Ravi Bopara (50* off 28b & 1/18)",
+    "potm": "Official Result",
     "scorecard": {
-      "team1Innings": [
-        {
-          "name": "Rony Talukdar",
-          "dismissal": "c Mustard b Patel",
-          "runs": 44,
-          "balls": 30
-        },
-        {
-          "name": "Al-Amin Hossain",
-          "dismissal": "not out",
-          "runs": 31,
-          "balls": 19
-        },
-        {
-          "name": "Mohammad Ashraful",
-          "dismissal": "c Bell b Sidebottom",
-          "runs": 24,
-          "balls": 18
-        },
-        {
-          "name": "Imrul Kayes",
-          "dismissal": "b Patel",
-          "runs": 18,
-          "balls": 14
-        },
-        {
-          "name": "Naeem Islam",
-          "dismissal": "c Pietersen b Bopara",
-          "runs": 15,
-          "balls": 13
-        },
-        {
-          "name": "Nadif Chowdhury",
-          "dismissal": "b Patel",
-          "runs": 11,
-          "balls": 9
-        },
-        {
-          "name": "Elias Sunny",
-          "dismissal": "c Tremlett b Sidebottom",
-          "runs": 8,
-          "balls": 6
-        },
-        {
-          "name": "Abu Jayed",
-          "dismissal": "c Bell b Tremlett",
-          "runs": 4,
-          "balls": 5
-        },
-        {
-          "name": "Abdur Razzak",
-          "dismissal": "b Patel",
-          "runs": 3,
-          "balls": 4
-        },
-        {
-          "name": "Sohrawardi Shuvo",
-          "dismissal": "run out",
-          "runs": 2,
-          "balls": 2
-        }
-      ],
-      "team1Bowling": [
-        {
-          "bowler": "Samit Patel",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "25",
-          "wickets": "4",
-          "econ": "6.25"
-        },
-        {
-          "bowler": "Ryan Sidebottom",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "28",
-          "wickets": "2",
-          "econ": "7.00"
-        },
-        {
-          "bowler": "Ravi Bopara",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "18",
-          "wickets": "1",
-          "econ": "6.00"
-        },
-        {
-          "bowler": "Chris Tremlett",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "32",
-          "wickets": "1",
-          "econ": "8.00"
-        },
-        {
-          "bowler": "Chris Schofield",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "31",
-          "wickets": "0",
-          "econ": "10.33"
-        },
-        {
-          "bowler": "Owais Shah",
-          "overs": "2.0",
-          "maidens": "0",
-          "runs": "28",
-          "wickets": "0",
-          "econ": "14.00"
-        }
-      ],
-      "team2Innings": [
-        {
-          "name": "Ravi Bopara",
-          "dismissal": "not out",
-          "runs": 50,
-          "balls": 28
-        },
-        {
-          "name": "Kevin Pietersen",
-          "dismissal": "c Ashraful b Jayed",
-          "runs": 38,
-          "balls": 22
-        },
-        {
-          "name": "Ian Bell",
-          "dismissal": "b Razzak",
-          "runs": 34,
-          "balls": 25
-        },
-        {
-          "name": "Phil Mustard (wk)",
-          "dismissal": "c Talukdar b Shuvo",
-          "runs": 25,
-          "balls": 15
-        },
-        {
-          "name": "Owais Shah",
-          "dismissal": "not out",
-          "runs": 14,
-          "balls": 7
-        }
-      ],
-      "team2Bowling": [
-        {
-          "bowler": "Abu Jayed",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "26",
-          "wickets": "1",
-          "econ": "8.67"
-        },
-        {
-          "bowler": "Abdur Razzak",
-          "overs": "3.1",
-          "maidens": "0",
-          "runs": "31",
-          "wickets": "1",
-          "econ": "9.79"
-        },
-        {
-          "bowler": "Sohrawardi Shuvo",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "29",
-          "wickets": "1",
-          "econ": "9.67"
-        },
-        {
-          "bowler": "Elias Sunny",
-          "overs": "3.0",
-          "maidens": "0",
-          "runs": "35",
-          "wickets": "0",
-          "econ": "11.67"
-        },
-        {
-          "bowler": "Al-Amin Hossain",
-          "overs": "4.0",
-          "maidens": "0",
-          "runs": "43",
-          "wickets": "0",
-          "econ": "10.75"
-        }
-      ],
-      "summary": "Samit Patel took 4/25 before Ravi Bopara's unbeaten 50* and Kevin Pietersen's 38 sealed an emphatic 7-wicket victory in 16.1 overs for England Champions."
+      "summary": "W Province won by 9 wickets (with 25 balls remaining) (Easterns: 130/7 vs W Province: 134/1)",
+      "keyBatters": "Easterns: 130/7 • W Province: 134/1",
+      "keyBowlers": "Newlands, Cape Town"
+    }
+  },
+  {
+    "id": "129581",
+    "country": "Mongolia & Kuwait",
+    "format": "T20I",
+    "series": " Men's T20 World Cup Sub Regional Asia Qualifier A • 6th Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "result": "Kuwait won by 10 wickets (with 99 balls remaining)",
+    "winnerName": "Kuwait",
+    "loserName": "Mongolia",
+    "team1": {
+      "name": "Mongolia",
+      "score": "42",
+      "overs": "",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "Kuwait",
+      "score": "43/0",
+      "overs": "3.3/20 ov, T:43",
+      "isWinner": true
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Kuwait won by 10 wickets (with 99 balls remaining) (Mongolia: 42 vs Kuwait: 43/0)",
+      "keyBatters": "Mongolia: 42 • Kuwait: 43/0",
+      "keyBowlers": "YSD-UKM Cricket Oval, Bangi"
+    }
+  },
+  {
+    "id": "129580",
+    "country": "Bahrain & Bhutan",
+    "format": "T20I",
+    "series": " Men's T20 World Cup Sub Regional Asia Qualifier A • 5th Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "result": "Bahrain won by 66 runs",
+    "winnerName": "Bahrain",
+    "loserName": "Bhutan",
+    "team1": {
+      "name": "Bahrain",
+      "score": "139/5",
+      "overs": "",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "Bhutan",
+      "score": "73",
+      "overs": "18.4/20 ov, T:140",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Bahrain won by 66 runs (Bahrain: 139/5 vs Bhutan: 73)",
+      "keyBatters": "Bahrain: 139/5 • Bhutan: 73",
+      "keyBowlers": "Bayuemas Oval, Kuala Lumpur"
+    }
+  },
+  {
+    "id": "129627",
+    "country": "BAN-WMN U19 & PAK-WMN U19",
+    "format": "T20I",
+    "series": "Pakistan Women's Under-19s T20 Tri-Series • 4th Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Iqbal Stadium, Faisalabad, Faisalabad",
+    "result": "BAN-WMN U19 won by 13 runs",
+    "winnerName": "BAN-WMN U19",
+    "loserName": "PAK-WMN U19",
+    "team1": {
+      "name": "BAN-WMN U19",
+      "score": "139/5",
+      "overs": "",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "PAK-WMN U19",
+      "score": "126/7",
+      "overs": "20 ov, T:140",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "BAN-WMN U19 won by 13 runs (BAN-WMN U19: 139/5 vs PAK-WMN U19: 126/7)",
+      "keyBatters": "BAN-WMN U19: 139/5 • PAK-WMN U19: 126/7",
+      "keyBowlers": "Iqbal Stadium, Faisalabad"
+    }
+  },
+  {
+    "id": "129579",
+    "country": "Thailand & Qatar",
+    "format": "T20I",
+    "series": " Men's T20 World Cup Sub Regional Asia Qualifier A • 4th Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "result": "Qatar won by 7 wickets (with 45 balls remaining)",
+    "winnerName": "Qatar",
+    "loserName": "Thailand",
+    "team1": {
+      "name": "Thailand",
+      "score": "76/9",
+      "overs": "",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "Qatar",
+      "score": "80/3",
+      "overs": "12.3/20 ov, T:77",
+      "isWinner": true
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Qatar won by 7 wickets (with 45 balls remaining) (Thailand: 76/9 vs Qatar: 80/3)",
+      "keyBatters": "Thailand: 76/9 • Qatar: 80/3",
+      "keyBowlers": "Bayuemas Oval, Kuala Lumpur"
+    }
+  },
+  {
+    "id": "129856",
+    "country": "Qld Women & BAN Women",
+    "format": "T20I",
+    "series": "Bangladesh Women in Australia • Tour Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Ian Healy Oval, Brisbane, Brisbane",
+    "result": "Qld Women won by 72 runs (DLS method)",
+    "winnerName": "Qld Women",
+    "loserName": "BAN Women",
+    "team1": {
+      "name": "Qld Women",
+      "score": "266/9",
+      "overs": "36/36 ov",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "BAN Women",
+      "score": "196/7",
+      "overs": "36/36 ov, T:269",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Qld Women won by 72 runs (DLS method) (Qld Women: 266/9 vs BAN Women: 196/7)",
+      "keyBatters": "Qld Women: 266/9 • BAN Women: 196/7",
+      "keyBowlers": "Ian Healy Oval, Brisbane"
+    }
+  },
+  {
+    "id": "129750",
+    "country": "Rajshahi DIV & Chattogram",
+    "format": "TEST",
+    "series": "National Cricket League • 4th Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium, Chattogram, Chattogram",
+    "result": "Match drawn",
+    "winnerName": "Rajshahi DIV",
+    "loserName": "Chattogram",
+    "team1": {
+      "name": "Rajshahi DIV",
+      "score": "364 & 224/8",
+      "overs": "",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "Chattogram",
+      "score": "393",
+      "overs": "",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Match drawn (Rajshahi DIV: 364 & 224/8 vs Chattogram: 393)",
+      "keyBatters": "Rajshahi DIV: 364 & 224/8 • Chattogram: 393",
+      "keyBowlers": "Bir Sreshtho Flight Lieutenant Matiur Rahman Stadium, Chattogram"
+    }
+  },
+  {
+    "id": "129748",
+    "country": "Rangpur DIV & Dhaka DIV",
+    "format": "TEST",
+    "series": "National Cricket League • 2nd Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Shere Bangla National Stadium, Mirpur, Dhaka",
+    "result": "Match drawn",
+    "winnerName": "Rangpur DIV",
+    "loserName": "Dhaka DIV",
+    "team1": {
+      "name": "Rangpur DIV",
+      "score": "340 & 149",
+      "overs": "",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "Dhaka DIV",
+      "score": "284 & 9/0",
+      "overs": "T:206",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Match drawn (Rangpur DIV: 340 & 149 vs Dhaka DIV: 284 & 9/0)",
+      "keyBatters": "Rangpur DIV: 340 & 149 • Dhaka DIV: 284 & 9/0",
+      "keyBowlers": "Shere Bangla National Stadium, Mirpur"
+    }
+  },
+  {
+    "id": "129747",
+    "country": "Mymensingh & Sylhet DIV",
+    "format": "TEST",
+    "series": "National Cricket League • 1st Match",
+    "date": "06 Oct 2026",
+    "isToday": false,
+    "isYesterday": true,
+    "venue": "Sylhet International Cricket Stadium, Sylhet",
+    "result": "Match drawn",
+    "winnerName": "Mymensingh",
+    "loserName": "Sylhet DIV",
+    "team1": {
+      "name": "Mymensingh",
+      "score": "311 & 372/6",
+      "overs": "",
+      "isWinner": true
+    },
+    "team2": {
+      "name": "Sylhet DIV",
+      "score": "327",
+      "overs": "",
+      "isWinner": false
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "Match drawn (Mymensingh: 311 & 372/6 vs Sylhet DIV: 327)",
+      "keyBatters": "Mymensingh: 311 & 372/6 • Sylhet DIV: 327",
+      "keyBowlers": "Sylhet International Cricket Stadium"
     }
   }
 ]
