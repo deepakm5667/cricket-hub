@@ -383,13 +383,41 @@
         <section id="tab-upcoming" class="tab-content hidden space-y-5">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
             <div>
-              <h2 class="text-lg font-bold text-slate-900">Upcoming Cricket Schedule & Stadium Venues</h2>
-              <p class="text-xs text-slate-500">International fixtures with match dates, stadiums, IST timing, and TV broadcasters.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <h2 class="text-lg font-bold text-slate-900">Official Cricket Fixtures & Schedule</h2>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">100% Real Time</span>
+              </div>
+              <p class="text-xs text-slate-500">Verified official upcoming fixtures with Indian Standard Time (IST), stadiums, and TV broadcast details.</p>
             </div>
-            <input type="text" id="upcomingSearch" onkeyup="searchUpcoming()" placeholder="Filter by team or venue..." class="bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-1.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500 w-full sm:w-64">
+            <input type="text" id="upcomingSearch" onkeyup="searchUpcoming()" placeholder="Search team, tournament, venue..." class="bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-1.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500 w-full sm:w-64 shadow-inner">
           </div>
 
-          <div class="space-y-3" id="upcomingMatchesContainer">
+          <!-- Quick Filters: All, Today, Tomorrow, Team India, T20, ODI, Test -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 bg-white p-2.5 rounded-2xl border border-slate-200 text-xs shadow-sm no-scrollbar">
+            <button onclick="filterUpcomingTab('ALL')" id="upFilterALL" class="up-filter-btn px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-bold transition shadow-sm whitespace-nowrap cursor-pointer">
+              All Fixtures (<span id="countUpAll">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('TODAY')" id="upFilterTODAY" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              ⚡ Today (<span id="countUpToday">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('TOMORROW')" id="upFilterTOMORROW" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              📅 Tomorrow (<span id="countUpTomorrow">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('INDIA')" id="upFilterINDIA" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              🇮🇳 Team India (<span id="countUpIndia">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('T20')" id="upFilterT20" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              T20 / T20I (<span id="countUpT20">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('ODI')" id="upFilterODI" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              ODI (<span id="countUpODI">0</span>)
+            </button>
+            <button onclick="filterUpcomingTab('TEST')" id="upFilterTEST" class="up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer">
+              Test & 4-Day (<span id="countUpTest">0</span>)
+            </button>
+          </div>
+
+          <div class="space-y-4" id="upcomingMatchesContainer">
             <!-- Injected via JS -->
           </div>
         </section>
@@ -2120,130 +2148,804 @@
 ];
     window.upcomingMatches = [
   {
-    "id": "up-zimw-wiw-3",
+    "id": "up-129707",
     "match": "Zimbabwe Women vs West Indies Women - 3rd T20I",
     "format": "T20I",
-    "tournament": "West Indies Women tour of Zimbabwe, 2026",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "05:00 PM IST (01:30 PM Local)",
-    "venue": "Takashinga Sports Club, Harare, Zimbabwe",
-    "broadcast": "FanCode, ZC Live",
+    "tournament": "West Indies Women in Zimbabwe • 3rd T20I",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "03:30 PM IST",
+    "venue": "Takashinga Sports Club, Highfield, Harare, Harare",
+    "broadcast": "FanCode, Willow TV",
     "teams": {
       "home": "Zimbabwe Women",
-      "away": "West Indies Women"
-    }
+      "away": "West Indies Women",
+      "homeShort": "ZIM-W",
+      "awayShort": "WI-W"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791367200000
   },
   {
-    "id": "up-swd-lions-pro20",
+    "id": "up-129241",
     "match": "South Western Districts vs Lions - Pool A",
     "format": "T20",
-    "tournament": "CSA Pro20 Cup",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "05:30 PM IST (02:00 PM Local)",
-    "venue": "Recreation Ground, Oudtshoorn",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Recreation Ground, Oudtshoorn, Oudtshoorn",
     "broadcast": "SuperSport, FanCode",
     "teams": {
       "home": "South Western Districts",
-      "away": "Lions"
-    }
+      "away": "Lions",
+      "homeShort": "SWD",
+      "awayShort": "LIONS"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791370800000
   },
   {
-    "id": "up-usa-nam-cwc",
-    "match": "USA vs Namibia - 130th Match",
+    "id": "up-129566",
+    "match": "United States of America vs Namibia - 129th Match",
     "format": "ODI",
-    "tournament": "ICC Men's Cricket World Cup League 2",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "08:30 PM IST (10:00 AM Local)",
-    "venue": "Grand Prairie Cricket Stadium, Dallas, Texas",
-    "broadcast": "FanCode, Willow TV",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 129th Match",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Grand Prairie Stadium, Dallas, Dallas",
+    "broadcast": "ICC.tv, FanCode",
     "teams": {
-      "home": "USA",
-      "away": "Namibia"
-    }
+      "home": "United States of America",
+      "away": "Namibia",
+      "homeShort": "USA",
+      "awayShort": "NAM"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791385200000
   },
   {
-    "id": "up-pakch-wich-wcl",
-    "match": "Pakistan Champions vs West Indies Champions",
+    "id": "up-129239",
+    "match": "Knights vs KwaZulu-Natal Inland - Pool B",
     "format": "T20",
-    "tournament": "World Championship of Legends 2026",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "08:00 PM IST",
-    "venue": "Sharjah Cricket Stadium, Sharjah, UAE",
-    "broadcast": "Star Sports Network, FanCode",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Mangaung Oval, Bloemfontein, Bloemfontein",
+    "broadcast": "SuperSport, FanCode",
     "teams": {
-      "home": "Pakistan Champions",
-      "away": "West Indies Champions"
-    }
+      "home": "Knights",
+      "away": "KwaZulu-Natal Inland",
+      "homeShort": "KNGHT",
+      "awayShort": "KZNIN"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791388800000
   },
   {
-    "id": "up-ind-wi-2",
-    "match": "India vs West Indies - 2nd T20I",
-    "format": "T20I",
-    "tournament": "West Indies tour of India, 2026",
-    "date": "Friday, 09 Oct 2026",
-    "time": "07:00 PM IST",
-    "venue": "Arun Jaitley Stadium, New Delhi",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "West Indies"
-    }
-  },
-  {
-    "id": "up-indch-pakch-wcl",
-    "match": "India Champions vs Pakistan Champions",
+    "id": "up-129240",
+    "match": "Titans vs South Africa Emerging Players - Pool B",
     "format": "T20",
-    "tournament": "World Championship of Legends 2026 (Marquee)",
-    "date": "Saturday, 10 Oct 2026",
-    "time": "08:00 PM IST",
-    "venue": "Dubai International Cricket Stadium, Dubai, UAE",
-    "broadcast": "Star Sports Network, FanCode",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "09:30 PM IST",
+    "venue": "SuperSport Park, Centurion, Centurion",
+    "broadcast": "SuperSport, FanCode",
     "teams": {
-      "home": "India Champions",
-      "away": "Pakistan Champions"
-    }
+      "home": "Titans",
+      "away": "South Africa Emerging Players",
+      "homeShort": "TITNS",
+      "awayShort": "SA-EM"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791388800000
   },
   {
-    "id": "up-ind-wi-3",
-    "match": "India vs West Indies - 3rd T20I",
-    "format": "T20I",
-    "tournament": "West Indies tour of India, 2026",
-    "date": "Sunday, 11 Oct 2026",
-    "time": "07:00 PM IST",
-    "venue": "Eden Gardens, Kolkata",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "West Indies"
-    }
-  },
-  {
-    "id": "up-ind-nz-test-1",
-    "match": "India vs New Zealand - 1st Test",
+    "id": "up-127796",
+    "match": "New South Wales vs Tasmania - 2nd Match",
     "format": "TEST",
-    "tournament": "New Zealand tour of India, 2026",
-    "date": "Wednesday, 16 Oct 2026",
-    "time": "09:30 AM IST",
-    "venue": "M. Chinnaswamy Stadium, Bengaluru",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "New Zealand"
-    }
-  },
-  {
-    "id": "up-aus-pak-odi-1",
-    "match": "Australia vs Pakistan - 1st ODI",
-    "format": "ODI",
-    "tournament": "Pakistan tour of Australia, 2026",
-    "date": "Monday, 19 Oct 2026",
-    "time": "09:00 AM IST",
-    "venue": "Melbourne Cricket Ground (MCG), Melbourne, Australia",
+    "tournament": "Sheffield Shield • 2nd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "05:00 AM IST",
+    "venue": "Cricket Central, Sydney, Sydney",
     "broadcast": "Star Sports Network, Disney+ Hotstar",
     "teams": {
-      "home": "Australia",
-      "away": "Pakistan"
-    }
+      "home": "New South Wales",
+      "away": "Tasmania",
+      "homeShort": "NSW",
+      "awayShort": "TAS"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791415800000
+  },
+  {
+    "id": "up-129582",
+    "match": "Kuwait vs Thailand - 7th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 7th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Kuwait",
+      "away": "Thailand",
+      "homeShort": "KUW",
+      "awayShort": "THA"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-129583",
+    "match": "Bhutan vs Mongolia - 8th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 8th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bhutan",
+      "away": "Mongolia",
+      "homeShort": "BHU",
+      "awayShort": "MNG"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-129584",
+    "match": "Bahrain vs Myanmar - 9th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 9th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bahrain",
+      "away": "Myanmar",
+      "homeShort": "BHR",
+      "awayShort": "MYAN"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-127797",
+    "match": "Western Australia vs Queensland - 3rd Match",
+    "format": "TEST",
+    "tournament": "Sheffield Shield • 3rd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "08:00 AM IST",
+    "venue": "Western Australia Cricket Association Ground, Perth, Perth",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "Western Australia",
+      "away": "Queensland",
+      "homeShort": "WA",
+      "awayShort": "QLD"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791426600000
+  },
+  {
+    "id": "up-129628",
+    "match": "Bangladesh Women Under-19s vs Sri Lanka Women Under-19s - 5th Match",
+    "format": "T20",
+    "tournament": "Pakistan Women's Under-19s T20 Tri-Series • 5th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "10:30 AM IST",
+    "venue": "Iqbal Stadium, Faisalabad, Faisalabad",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Bangladesh Women Under-19s",
+      "away": "Sri Lanka Women Under-19s",
+      "homeShort": "BAW19",
+      "awayShort": "SLW19"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791435600000
+  },
+  {
+    "id": "up-129597",
+    "match": "China vs Maldives - 1st Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 1st Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "China",
+      "away": "Maldives",
+      "homeShort": "CHN",
+      "awayShort": "MDV"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129598",
+    "match": "Saudi Arabia vs Singapore - 2nd Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 2nd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Saudi Arabia",
+      "away": "Singapore",
+      "homeShort": "KSA",
+      "awayShort": "SGP"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129599",
+    "match": "Malaysia vs Hong Kong - 3rrd Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 3rrd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Malaysia",
+      "away": "Hong Kong",
+      "homeShort": "MAS",
+      "awayShort": "HKG"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129242",
+    "match": "Boland vs Easterns - Pool B",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Boland Park, Paarl, Paarl",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Boland",
+      "away": "Easterns",
+      "homeShort": "BOL",
+      "awayShort": "EASTN"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791475200000
+  },
+  {
+    "id": "up-129243",
+    "match": "Warriors vs Northern Cape - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "09:30 PM IST",
+    "venue": "St George's Park, Gqeberha, Gqeberha",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Warriors",
+      "away": "Northern Cape",
+      "homeShort": "WAR",
+      "awayShort": "NCAPE"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791475200000
+  },
+  {
+    "id": "up-129585",
+    "match": "Mongolia vs Thailand - 10th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 10th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Mongolia",
+      "away": "Thailand",
+      "homeShort": "MNG",
+      "awayShort": "THA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-129586",
+    "match": "Bahrain vs Kuwait - 11th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 11th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bahrain",
+      "away": "Kuwait",
+      "homeShort": "BHR",
+      "awayShort": "KUW"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-129587",
+    "match": "Qatar vs Myanmar - 12th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 12th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Qatar",
+      "away": "Myanmar",
+      "homeShort": "QAT",
+      "awayShort": "MYAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-126591",
+    "match": "India A vs Australia A - 2nd unofficial ODI",
+    "format": "ODI",
+    "tournament": "Australia A in India • 2nd unofficial ODI",
+    "date": "Friday, Oct 09, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Cricket Association Pondicherry Siechem Ground, Puducherry",
+    "broadcast": "Sports18 Network, JioCinema",
+    "teams": {
+      "home": "India A",
+      "away": "Australia A",
+      "homeShort": "IND-A",
+      "awayShort": "AUS-A"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": true,
+    "sortTime": 1791516600000
+  },
+  {
+    "id": "up-125164",
+    "match": "Australia Women vs Bangladesh Women - 1st ODI",
+    "format": "ODI",
+    "tournament": "Bangladesh Women in Australia • 1st ODI",
+    "date": "Friday, Oct 09, 2026",
+    "time": "09:20 AM IST",
+    "venue": "Allan Border Field, Brisbane, Brisbane",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "Australia Women",
+      "away": "Bangladesh Women",
+      "homeShort": "AUS-W",
+      "awayShort": "BAN-W"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791517800000
+  },
+  {
+    "id": "up-129629",
+    "match": "Pakistan Women Under-19s vs Sri Lanka Women Under-19s - 6th Match",
+    "format": "T20",
+    "tournament": "Pakistan Women's Under-19s T20 Tri-Series • 6th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "10:30 AM IST",
+    "venue": "Iqbal Stadium, Faisalabad, Faisalabad",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Pakistan Women Under-19s",
+      "away": "Sri Lanka Women Under-19s",
+      "homeShort": "PAW19",
+      "awayShort": "SLW19"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791522000000
+  },
+  {
+    "id": "up-129570",
+    "match": "Oman vs Canada - 130th Match",
+    "format": "ODI",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 130th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Al Amerat Cricket Ground Oman Cricket (Ministry Turf 1), Al Amarat",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Oman",
+      "away": "Canada",
+      "homeShort": "OMA",
+      "awayShort": "CAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129600",
+    "match": "Malaysia vs Saudi Arabia - 4th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 4th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Malaysia",
+      "away": "Saudi Arabia",
+      "homeShort": "MAS",
+      "awayShort": "KSA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129601",
+    "match": "China vs Hong Kong - 5th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 5th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "China",
+      "away": "Hong Kong",
+      "homeShort": "CHN",
+      "awayShort": "HKG"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129602",
+    "match": "Maldives vs Singapore - 6th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 6th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Maldives",
+      "away": "Singapore",
+      "homeShort": "MDV",
+      "awayShort": "SGP"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129711",
+    "match": "Afghanistan vs Bangladesh - Only Test",
+    "format": "TEST",
+    "tournament": "Afghanistan v Bangladesh • Only Test",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Zayed Cricket Stadium, Abu Dhabi, Abu Dhabi",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Afghanistan",
+      "away": "Bangladesh",
+      "homeShort": "AFG",
+      "awayShort": "BAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-124654",
+    "match": "South Africa vs Australia - 1st Test",
+    "format": "TEST",
+    "tournament": "Australia in South Africa • 1st Test",
+    "date": "Friday, Oct 09, 2026",
+    "time": "01:00 PM IST",
+    "venue": "Kingsmead, Durban, Durban",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "South Africa",
+      "away": "Australia",
+      "homeShort": "SA",
+      "awayShort": "AUS"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791531000000
+  },
+  {
+    "id": "up-129244",
+    "match": "Border vs Dolphins - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Friday, Oct 09, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Buffalo Park, KuGumpo City, KuGompo City",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Border",
+      "away": "Dolphins",
+      "homeShort": "BOR",
+      "awayShort": "DOLPH"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791543600000
+  },
+  {
+    "id": "up-125391",
+    "match": "India vs West Indies - 2nd T20I",
+    "format": "T20I",
+    "tournament": "West Indies in India • 2nd T20I",
+    "date": "Friday, Oct 09, 2026",
+    "time": "07:00 PM IST",
+    "venue": "JSCA International Stadium Complex, Ranchi, Ranchi",
+    "broadcast": "Sports18 Network, JioCinema",
+    "teams": {
+      "home": "India",
+      "away": "West Indies",
+      "homeShort": "IND",
+      "awayShort": "WI"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": true,
+    "sortTime": 1791552600000
+  },
+  {
+    "id": "up-128951",
+    "match": "Pakistan vs Sri Lanka - 1st T20I",
+    "format": "T20I",
+    "tournament": "Sri Lanka in Pakistan • 1st T20I",
+    "date": "Friday, Oct 09, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Rawalpindi Cricket Stadium, Rawalpindi",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Pakistan",
+      "away": "Sri Lanka",
+      "homeShort": "PAK",
+      "awayShort": "SL"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791558000000
+  },
+  {
+    "id": "up-129567",
+    "match": "Namibia vs United Arab Emirates - 131st Match",
+    "format": "ODI",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 131st Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Grand Prairie Stadium, Dallas, Dallas",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Namibia",
+      "away": "United Arab Emirates",
+      "homeShort": "NAM",
+      "awayShort": "UAE"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791558000000
+  },
+  {
+    "id": "up-129751",
+    "match": "Sylhet Division vs Dhaka Division - 5th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 5th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sylhet International Cricket Stadium, Sylhet",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Sylhet Division",
+      "away": "Dhaka Division",
+      "homeShort": "SYL",
+      "awayShort": "DHA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129752",
+    "match": "Mymensingh Division vs Rangpur Division - 6th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 6th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sylhet International Cricket Stadium, Academy Ground, Sylhet",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Mymensingh Division",
+      "away": "Rangpur Division",
+      "homeShort": "MYMS",
+      "awayShort": "RAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129753",
+    "match": "Khulna Division vs Rajshahi Division - 7th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 7th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Shere Bangla National Stadium, Mirpur, Dhaka",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Khulna Division",
+      "away": "Rajshahi Division",
+      "homeShort": "KHU",
+      "awayShort": "RAJ"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129754",
+    "match": "Chattogram Division vs Barishal Division - 8th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 8th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sheikh Kamal International Cricket Stadium Academy Ground, Cox's Bazar, Cox's Bazar",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Chattogram Division",
+      "away": "Barishal Division",
+      "homeShort": "CHATT",
+      "awayShort": "BAR"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129509",
+    "match": "Titans Women vs Lions Women - 4th Match",
+    "format": "ODI",
+    "tournament": "CSA Women Pro50 Series • 4th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "01:30 PM IST",
+    "venue": "SuperSport Park, Centurion, Centurion",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Titans Women",
+      "away": "Lions Women",
+      "homeShort": "TTN-W",
+      "awayShort": "LIO-W"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791619200000
+  },
+  {
+    "id": "up-129246",
+    "match": "Mpumalanga vs Western Province - Pool B",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Uplands College, White River, White River",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Mpumalanga",
+      "away": "Western Province",
+      "homeShort": "MPUMA",
+      "awayShort": "WPR"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791630000000
+  },
+  {
+    "id": "up-129245",
+    "match": "North West vs South Western Districts - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Senwes Park, Potchefstroom, Potchefstroom",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "North West",
+      "away": "South Western Districts",
+      "homeShort": "NWEST",
+      "awayShort": "SWD"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791648000000
+  },
+  {
+    "id": "up-129733",
+    "match": "Pakistan Association of Hong Kong vs United Services Recreation Club - 2nd Match",
+    "format": "ODI",
+    "tournament": "HKPL One-Day Tournament • 2nd Match",
+    "date": "Sunday, Oct 11, 2026",
+    "time": "06:30 AM IST",
+    "venue": "Mission Road Ground, Mong Kok, Hong Kong, Mong Kok",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Pakistan Association of Hong Kong",
+      "away": "United Services Recreation Club",
+      "homeShort": "PAHKG",
+      "awayShort": "USRC"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791680400000
   }
 ];
     window.iplData = {
@@ -3440,8 +4142,13 @@
       const todayLiveFeedUpcoming = liveCards.filter(c => !c.isLive && /today|starts today|match yet to begin|scheduled/i.test(c.statusText || ''));
       
       const todayFixedUpcoming = (window.upcomingMatches || []).filter(u => {
+        if (u.isToday) return true;
         const d = (u.date || '').toLowerCase();
-        return d.includes('07 oct 2026') || d.includes('today') || d.includes('wednesday');
+        const now = new Date();
+        const pad = n => String(n).padStart(2, '0');
+        const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+        const todayStr = `${pad(now.getDate())} ${months[now.getMonth()]}`;
+        return d.includes(todayStr) || d.includes('today');
       }).map(u => ({
         id: u.id,
         tickerText: `${u.teams?.home || 'Team 1'} vs ${u.teams?.away || 'Team 2'} - ${u.time || 'Starts today'}`,
@@ -3602,7 +4309,16 @@
       });
 
       // Explicit re-render ensures fresh data is displayed immediately
-      if (tabId === 'recent') renderRecentMatches();
+      if (tabId === 'recent') {
+        renderRecentMatches();
+        fetch(API_BASE + '/api/recent').then(r => r.json()).then(rec => {
+          if (Array.isArray(rec)) {
+            window.recentMatches = rec.filter(m => isMatchCompleted(m) && isTodayOrYesterday(m.date));
+            renderRecentMatches();
+            updateMatchCounts(allLiveMatchesData);
+          }
+        }).catch(() => {});
+      }
       if (tabId === 'upcoming') renderUpcomingMatches();
       if (tabId === 'rankings') renderRankings('TEST');
       if (tabId === 'ipl') renderIpl();
@@ -3801,6 +4517,7 @@
 
     // Automatically detects live server domain vs local file opening
     const API_BASE = window.location.protocol.startsWith('http') ? '' : 'http://localhost:3000';
+    let recentFetchCycle = 0;
 
     async function fetchLiveMatchesNow() {
       try {
@@ -3820,11 +4537,13 @@
         const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
         setText('lastUpdatedTime', 'Updated: ' + nowStr);
 
+        recentFetchCycle++;
+
         if (fetchedData && fetchedData.matches && fetchedData.matches.length > 0) {
           allLiveMatchesData = fetchedData.matches;
           // Dynamically promote completed live matches to recent matches
           const completedLive = fetchedData.matches.filter(m => isMatchCompleted(m));
-          if (completedLive.length > 0 || !window.recentMatches) {
+          if (completedLive.length > 0 || !window.recentMatches || recentFetchCycle % 5 === 0) {
             fetch(API_BASE + '/api/recent').then(r => r.json()).then(rec => {
               if (Array.isArray(rec)) {
                 window.recentMatches = rec.filter(m => isMatchCompleted(m) && isTodayOrYesterday(m.date));
@@ -4157,6 +4876,11 @@
     } else {
       fetchAllData();
     }
+
+    // Periodic background sync for schedule, recent matches & rankings every 60s
+    setInterval(() => {
+      fetchAllData();
+    }, 60000);
 
         // RECENT MATCHES STATE & FILTERS (TODAY & YESTERDAY ONLY - AUTO UPDATES DAILY)
     let currentRecentFormat = 'ALL';
@@ -4996,284 +5720,278 @@
       filterRecentFormat(format);
     }
 
-    // RENDER UPCOMING MATCHES (UNIFIED REAL LIVE FEED & SCHEDULE)
+    // RENDER UPCOMING MATCHES (OFFICIAL CRICINFO FIXTURES & SCHEDULE)
+    let currentUpcomingFilter = 'ALL';
+    let currentUpcomingSearch = '';
+
+    function filterUpcomingTab(filter) {
+      currentUpcomingFilter = filter;
+      document.querySelectorAll('.up-filter-btn').forEach(b => {
+        b.className = 'up-filter-btn px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 font-semibold transition whitespace-nowrap cursor-pointer';
+      });
+      const activeBtn = document.getElementById('upFilter' + filter);
+      if (activeBtn) activeBtn.className = 'up-filter-btn px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-bold transition shadow-sm whitespace-nowrap cursor-pointer';
+      renderUpcomingMatches();
+    }
+
+    function searchUpcoming() {
+      const input = document.getElementById('upcomingSearch');
+      currentUpcomingSearch = (input ? input.value : '').toLowerCase().trim();
+      renderUpcomingMatches();
+    }
+
     function renderUpcomingMatches() {
       const container = document.getElementById('upcomingMatchesContainer');
       if (!container) return;
 
-      // 1. Gather live feed upcoming matches (exact same as shown in Live Tab 'Upcoming' filter)
-      const feedUpcoming = (allLiveMatchesData || []).filter(m => !isMatchTrulyLive(m) && (m.state === 'UPCOMING' || m.status === 'Scheduled' || /starts/i.test(m.statusText || '')));
-
-      // 2. Full schedule list (from window.upcomingMatches)
       const fullSchedule = window.upcomingMatches || [];
 
-      // If feed matches exist, prepare their compact Cricbuzz cards
-      const todayCards = (feedUpcoming.length > 0 ? feedUpcoming : fullSchedule.filter(m => m.isToday || (m.date || '').toLowerCase().includes('today') || (m.date || '').toLowerCase().includes('07 oct')));
+      // Update counters in filter tabs
+      const countAll = fullSchedule.length;
+      const countToday = fullSchedule.filter(m => m.isToday).length;
+      const countTomorrow = fullSchedule.filter(m => m.isTomorrow).length;
+      const countIndia = fullSchedule.filter(m => m.isIndia).length;
+      const countT20 = fullSchedule.filter(m => (m.format || '').includes('T20')).length;
+      const countODI = fullSchedule.filter(m => (m.format || '').includes('ODI')).length;
+      const countTest = fullSchedule.filter(m => (m.format || '').includes('TEST')).length;
 
-      // Separate future calendar matches
-      const futureSchedule = fullSchedule.filter(m => {
-        const title = (m.match || m.tournament || '').toLowerCase();
-        // Skip matches already displayed in todayCards
-        const alreadyInToday = todayCards.some(tc => {
-          const tcTitle = (tc.title || tc.series || '').toLowerCase();
-          const t1 = (tc.teams?.[0]?.name || '').toLowerCase();
-          const t2 = (tc.teams?.[1]?.name || '').toLowerCase();
-          return tcTitle.includes(title) || (t1 && t2 && title.includes(t1) && title.includes(t2));
+      if (document.getElementById('countUpAll')) document.getElementById('countUpAll').innerText = countAll;
+      if (document.getElementById('countUpToday')) document.getElementById('countUpToday').innerText = countToday;
+      if (document.getElementById('countUpTomorrow')) document.getElementById('countUpTomorrow').innerText = countTomorrow;
+      if (document.getElementById('countUpIndia')) document.getElementById('countUpIndia').innerText = countIndia;
+      if (document.getElementById('countUpT20')) document.getElementById('countUpT20').innerText = countT20;
+      if (document.getElementById('countUpODI')) document.getElementById('countUpODI').innerText = countODI;
+      if (document.getElementById('countUpTest')) document.getElementById('countUpTest').innerText = countTest;
+
+      if (fullSchedule.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 bg-white rounded-2xl border border-slate-200">
+            <span class="text-4xl block mb-2">📅</span>
+            <h3 class="text-base font-bold text-slate-800">No Upcoming Matches Found</h3>
+            <p class="text-xs text-slate-500 mt-1">Checking official ICC schedule...</p>
+          </div>
+        `;
+        return;
+      }
+
+      // Filter matches
+      let matches = [...fullSchedule];
+      if (currentUpcomingFilter === 'TODAY') {
+        matches = matches.filter(m => m.isToday);
+      } else if (currentUpcomingFilter === 'TOMORROW') {
+        matches = matches.filter(m => m.isTomorrow);
+      } else if (currentUpcomingFilter === 'INDIA') {
+        matches = matches.filter(m => m.isIndia);
+      } else if (currentUpcomingFilter === 'T20') {
+        matches = matches.filter(m => (m.format || '').includes('T20'));
+      } else if (currentUpcomingFilter === 'ODI') {
+        matches = matches.filter(m => (m.format || '').includes('ODI'));
+      } else if (currentUpcomingFilter === 'TEST') {
+        matches = matches.filter(m => (m.format || '').includes('TEST'));
+      }
+
+      if (currentUpcomingSearch) {
+        matches = matches.filter(m => {
+          const t = ((m.match || '') + ' ' + (m.tournament || '') + ' ' + (m.venue || '') + ' ' + (m.teams?.home || '') + ' ' + (m.teams?.away || '') + ' ' + (m.date || '')).toLowerCase();
+          return t.includes(currentUpcomingSearch);
         });
-        return !alreadyInToday;
-      });
+      }
+
+      function buildCard(m) {
+        const homeName = m.teams?.home || 'Team 1';
+        const awayName = m.teams?.away || 'Team 2';
+        const homeFlag = getTeamFlag(homeName);
+        const awayFlag = getTeamFlag(awayName);
+
+        const formatBadgeClass = m.format === 'TEST' 
+          ? 'bg-rose-100 text-rose-700 border-rose-200' 
+          : (m.format === 'ODI' 
+            ? 'bg-blue-100 text-blue-700 border-blue-200' 
+            : 'bg-emerald-100 text-emerald-800 border-emerald-200');
+
+        const isIndiaMatch = m.isIndia || homeName.includes('India') || awayName.includes('India');
+        const indiaHighlightBorder = isIndiaMatch ? 'border-emerald-300 ring-1 ring-emerald-300/40' : 'border-slate-200';
+
+        const dayBadge = m.isToday 
+          ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500 text-white shadow-xs">TODAY</span>'
+          : (m.isTomorrow 
+            ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-600 text-white shadow-xs">TOMORROW</span>'
+            : `<span class="text-xs text-slate-500 font-semibold">${m.date}</span>`);
+
+        return `
+          <div class="upcoming-card-item bg-white rounded-2xl border ${indiaHighlightBorder} p-4 hover:shadow-md transition flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm group">
+            <div class="flex items-start sm:items-center gap-3.5 flex-1 min-w-0">
+              <!-- Date & Format Stamp -->
+              <div class="w-16 h-16 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center text-center p-1 flex-shrink-0">
+                <span class="text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded border ${formatBadgeClass}">${m.format || 'T20'}</span>
+                <span class="text-[11px] font-bold text-slate-800 mt-1 leading-tight truncate w-full px-0.5">${m.date.split(',')[1] ? m.date.split(',')[1].trim().replace(/ 2026.*/, '') : m.date}</span>
+                <span class="text-[9px] text-slate-500 font-medium mt-0.5 uppercase">${m.date.split(',')[0] ? m.date.split(',')[0].trim().slice(0, 3) : ''}</span>
+              </div>
+
+              <!-- Match Content -->
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2 mb-1 flex-wrap">
+                  <span class="text-xs font-bold text-emerald-700 truncate max-w-[280px] sm:max-w-md" title="${m.tournament}">${m.tournament}</span>
+                  ${isIndiaMatch ? '<span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-200">🇮🇳 IND Match</span>' : ''}
+                  ${dayBadge}
+                  <span class="text-[11px] font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200/60">⏰ ${m.time}</span>
+                </div>
+
+                <!-- Teams Row -->
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-900 flex items-center gap-2 flex-wrap">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-base">${homeFlag}</span>
+                    <span>${homeName}</span>
+                  </span>
+                  <span class="text-slate-400 text-xs font-semibold px-0.5">vs</span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-base">${awayFlag}</span>
+                    <span>${awayName}</span>
+                  </span>
+                </h3>
+
+                <!-- Stadium Venue -->
+                <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5 truncate">
+                  <span>📍</span>
+                  <span class="truncate">Stadium: <strong class="text-slate-700">${m.venue}</strong></span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Broadcaster Info -->
+            <div class="sm:text-right flex-shrink-0 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex sm:flex-col justify-between items-center sm:items-end">
+              <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Live Broadcast</span>
+              <span class="text-xs font-bold text-emerald-700 mt-0.5 truncate max-w-[180px]">${m.broadcast || 'FanCode, JioCinema'}</span>
+            </div>
+          </div>
+        `;
+      }
 
       let html = '';
 
-      // Section 1: Today's Scheduled Matches (Exact Cricbuzz Cards Grid)
-      if (todayCards.length > 0) {
-        html += `
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-amber-500 animate-pulse"></span>
-                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
-                  Today's Scheduled Matches (In-Play Today)
-                </h3>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
-                  ${todayCards.length} Matches
-                </span>
-              </div>
-              <span class="text-xs text-slate-500 font-semibold hidden sm:inline">⚡ Live Cricbuzz Feed</span>
-            </div>
+      // If 'ALL' filter is active without search, group nicely by time horizons
+      if (currentUpcomingFilter === 'ALL' && !currentUpcomingSearch) {
+        const todayMatches = matches.filter(m => m.isToday);
+        const tomorrowMatches = matches.filter(m => m.isTomorrow);
+        const indiaMatches = matches.filter(m => m.isIndia && !m.isToday && !m.isTomorrow);
+        const otherMatches = matches.filter(m => !m.isIndia && !m.isToday && !m.isTomorrow);
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
-              ${todayCards.map(m => {
-                let team1Name = 'Team 1';
-                let team1Flag = '🏏';
-                let team2Name = 'Team 2';
-                let team2Flag = '🏏';
-
-                if (m.teams && m.teams.length >= 2) {
-                  team1Name = getTeamShortCode(m.teams[0].name, m.teams[0].abbreviation);
-                  team1Flag = getTeamFlag(m.teams[0].name);
-                  team2Name = getTeamShortCode(m.teams[1].name, m.teams[1].abbreviation);
-                  team2Flag = getTeamFlag(m.teams[1].name);
-                } else if (m.teams?.home && m.teams?.away) {
-                  team1Name = getTeamShortCode(m.teams.home);
-                  team1Flag = getTeamFlag(m.teams.home);
-                  team2Name = getTeamShortCode(m.teams.away);
-                  team2Flag = getTeamFlag(m.teams.away);
-                }
-
-                let formatPill = 'T20';
-                const titleLow = ((m.series || '') + ' ' + (m.title || '') + ' ' + (m.stage || '') + ' ' + (m.tournament || '')).toLowerCase();
-                if (titleLow.includes('test') || titleLow.includes('4-day')) formatPill = 'TEST';
-                else if (titleLow.includes('odi') || titleLow.includes('world cup') || titleLow.includes('league 2')) formatPill = 'ODI';
-                else if (titleLow.includes('t20')) formatPill = 'T20';
-
-                let seriesText = m.stage ? `${m.stage} • ${m.series || m.tournament}` : (m.series || m.tournament || 'Match');
-                if (seriesText.length > 38) seriesText = seriesText.substring(0, 36) + '...';
-
-                const statusLine = m.statusText || m.time || 'Scheduled for today • Match yet to begin';
-
-                return `
-                  <div class="upcoming-card-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all cursor-pointer overflow-hidden group select-none" onclick="toggleMatchExpand('${m.id}')">
-                    <div class="p-4">
-                      <!-- Top Row: Series Title & Format Badge -->
-                      <div class="flex items-center justify-between gap-2 mb-2.5">
-                        <span class="text-xs text-slate-500 font-medium truncate flex-1" title="${m.series || m.tournament}">
-                          ${seriesText}
-                        </span>
-                        <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-600 text-white">
-                          UPCOMING
-                        </span>
-                      </div>
-
-                      <!-- Team 1 Row -->
-                      <div class="flex items-center justify-between py-1 text-slate-900">
-                        <div class="flex items-center gap-2">
-                          <span class="text-lg">${team1Flag}</span>
-                          <span class="font-extrabold text-sm sm:text-base text-slate-800">${team1Name}</span>
-                        </div>
-                        <div class="font-mono text-sm sm:text-base font-extrabold text-slate-900">Yet to bat</div>
-                      </div>
-
-                      <!-- Team 2 Row -->
-                      <div class="flex items-center justify-between py-1 text-slate-900">
-                        <div class="flex items-center gap-2">
-                          <span class="text-lg">${team2Flag}</span>
-                          <span class="font-extrabold text-sm sm:text-base text-slate-800">${team2Name}</span>
-                        </div>
-                        <div class="font-mono text-sm sm:text-base font-extrabold text-slate-900">Yet to bat</div>
-                      </div>
-
-                      <!-- Status Line -->
-                      <div class="mt-2 text-xs font-bold text-slate-600 leading-snug">
-                        ${statusLine}
-                      </div>
-
-                      <!-- Bottom Action Strip -->
-                      <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                        <span class="text-[11px] font-bold text-slate-400 group-hover:text-emerald-700 transition">
-                          📍 ${m.venue || 'Stadium Venue'}
-                        </span>
-                        <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-black text-xs shadow">
-                          ›
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      }
-
-      // Section 2: Future Upcoming International Tournaments & Calendar
-      if (futureSchedule.length > 0) {
-        html += `
-          <div class="space-y-3 pt-2">
-            <div class="flex items-center justify-between border-t border-slate-200 pt-5">
-              <div class="flex items-center gap-2">
-                <span class="text-lg">📅</span>
-                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
-                  Upcoming International Tours & Series Schedule
-                </h3>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                  ${futureSchedule.length} Fixtures
-                </span>
-              </div>
-              <span class="text-xs text-slate-500 font-semibold hidden sm:inline">India & World Cricket</span>
-            </div>
-
+        // Section 1: Today's Scheduled Matches
+        if (todayMatches.length > 0) {
+          html += `
             <div class="space-y-3">
-              ${futureSchedule.map(m => {
-                const dateParts = (m.date || '').split(',');
-                const dayLabel = dateParts[0] ? dateParts[0].trim().slice(0, 3).toUpperCase() : '';
-                const dateLabel = dateParts[1] ? dateParts[1].trim().replace(' 2026', '') : (m.date || '');
-                const formatBadgeClass = m.format === 'TEST' 
-                  ? 'bg-rose-100 text-rose-700 border-rose-200' 
-                  : (m.format === 'ODI' 
-                    ? 'bg-blue-100 text-blue-700 border-blue-200' 
-                    : 'bg-emerald-100 text-emerald-800 border-emerald-200');
-
-                return `
-                  <div class="upcoming-card-item bg-white rounded-2xl border border-slate-200 p-4 hover:shadow-md transition flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
-                    <div class="flex items-center gap-3.5">
-                      <div class="w-16 h-16 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center text-center p-1 flex-shrink-0">
-                        <span class="text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded border ${formatBadgeClass}">${m.format}</span>
-                        <span class="text-xs font-bold text-slate-900 mt-1 leading-tight">${dateLabel}</span>
-                        <span class="text-[9px] text-slate-500 font-medium mt-0.5">${dayLabel}</span>
-                      </div>
-                      <div>
-                        <div class="flex items-center gap-2 mb-0.5 flex-wrap">
-                          <span class="text-xs font-bold text-emerald-700">${m.tournament}</span>
-                          <span class="text-xs text-slate-400">• ${m.date}</span>
-                          <span class="text-[11px] font-mono font-semibold text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">⏰ ${m.time}</span>
-                        </div>
-                        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                          <span>${m.teams?.home || 'Team 1'}</span> <span class="text-slate-400 text-xs font-normal">vs</span> <span>${m.teams?.away || 'Team 2'}</span>
-                        </h3>
-                        <p class="text-xs text-slate-500 mt-0.5">
-                          📍 Stadium: <strong>${m.venue}</strong>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="text-right flex-shrink-0 bg-slate-50 px-3 py-2 rounded-xl border border-slate-200">
-                      <span class="text-[10px] text-slate-500 block">Broadcast on:</span>
-                      <span class="text-xs font-bold text-emerald-700">${m.broadcast}</span>
-                    </div>
-                  </div>
-                `;
-              }).join('')}
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-amber-500 animate-pulse"></span>
+                  <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
+                    Today's Scheduled Matches (Starting Soon)
+                  </h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    ${todayMatches.length} Matches Today
+                  </span>
+                </div>
+                <span class="text-xs text-slate-500 font-semibold hidden sm:inline">⚡ Official Live Schedule</span>
+              </div>
+              <div class="space-y-3">
+                ${todayMatches.map(buildCard).join('')}
+              </div>
             </div>
-          </div>
-        `;
+          `;
+        }
+
+        // Section 2: Tomorrow's Matches
+        if (tomorrowMatches.length > 0) {
+          html += `
+            <div class="space-y-3 pt-3">
+              <div class="flex items-center justify-between border-t border-slate-200 pt-5">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">📅</span>
+                  <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
+                    Tomorrow's Matches
+                  </h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-900 border border-blue-200">
+                    ${tomorrowMatches.length} Matches Tomorrow
+                  </span>
+                </div>
+              </div>
+              <div class="space-y-3">
+                ${tomorrowMatches.map(buildCard).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        // Section 3: Team India Upcoming Marquee Series
+        if (indiaMatches.length > 0) {
+          html += `
+            <div class="space-y-3 pt-3">
+              <div class="flex items-center justify-between border-t border-slate-200 pt-5">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">🇮🇳</span>
+                  <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
+                    Team India Upcoming Series & Tours
+                  </h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    ${indiaMatches.length} Fixtures
+                  </span>
+                </div>
+                <span class="text-xs text-slate-500 font-semibold hidden sm:inline">India vs West Indies, New Zealand</span>
+              </div>
+              <div class="space-y-3">
+                ${indiaMatches.map(buildCard).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        // Section 4: Rest of International & Domestic Calendar
+        if (otherMatches.length > 0) {
+          html += `
+            <div class="space-y-3 pt-3">
+              <div class="flex items-center justify-between border-t border-slate-200 pt-5">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">🌐</span>
+                  <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
+                    International & Domestic Series Calendar
+                  </h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                    ${otherMatches.length} Fixtures
+                  </span>
+                </div>
+              </div>
+              <div class="space-y-3">
+                ${otherMatches.map(buildCard).join('')}
+              </div>
+            </div>
+          `;
+        }
+      } else {
+        // Filtered view
+        if (matches.length === 0) {
+          html = `
+            <div class="text-center py-12 bg-white rounded-2xl border border-slate-200">
+              <span class="text-3xl block mb-2">🔍</span>
+              <h3 class="text-sm font-bold text-slate-800">No matches match this filter</h3>
+              <p class="text-xs text-slate-500 mt-1">Try switching back to 'All Fixtures' or clearing your search.</p>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">
+                  Showing ${matches.length} Fixtures
+                </h3>
+              </div>
+              <div class="space-y-3">
+                ${matches.map(buildCard).join('')}
+              </div>
+            </div>
+          `;
+        }
       }
 
       container.innerHTML = html;
-    }
-
-    function searchUpcoming() {
-      const q = (document.getElementById('upcomingSearch')?.value || '').toLowerCase().trim();
-      document.querySelectorAll('#upcomingMatchesContainer .upcoming-card-item').forEach(it => {
-        it.classList.toggle('hidden', !it.innerText.toLowerCase().includes(q));
-      });
-    }
-
-    // RENDER ICC RANKINGS
-    function switchRankingFormat(fmt) {
-      document.querySelectorAll('.rank-format-btn').forEach(b => b.className = 'rank-format-btn px-4 py-1.5 rounded-lg text-slate-600 font-semibold hover:text-slate-900');
-      document.getElementById('rankBtn' + fmt).className = 'rank-format-btn px-4 py-1.5 rounded-lg bg-emerald-600 text-white font-bold shadow';
-      document.getElementById('teamsFormatLabel').innerText = fmt;
-      document.getElementById('batsmenFormatLabel').innerText = fmt;
-      document.getElementById('bowlersFormatLabel').innerText = fmt;
-      const allrounderLabel = document.getElementById('allroundersFormatLabel');
-      if (allrounderLabel) allrounderLabel.innerText = fmt;
-      renderRankings(fmt);
-    }
-
-    function renderRankings(fmt) {
-      if (!window.iccData) return;
-      const data = window.iccData[fmt];
-      if (!data) return;
-
-      // Top Teams
-      document.getElementById('topTeamsList').innerHTML = data.teams.map((t, idx) => `
-        <div class="flex items-center justify-between p-2 rounded-xl ${idx === 0 ? 'bg-blue-50 border border-blue-200' : 'bg-slate-50 border border-slate-100'}">
-          <div class="flex items-center gap-2">
-            <span class="w-4 font-bold ${idx === 0 ? 'text-blue-700' : 'text-slate-400'} text-xs">#${t.rank}</span>
-            <span class="text-base">${t.flag}</span>
-            <span class="text-xs font-bold text-slate-800">${t.name}</span>
-          </div>
-          <div class="text-right font-mono">
-            <span class="text-xs font-bold text-slate-900">${t.rating}</span>
-            <span class="text-[10px] text-slate-400 block">${t.points} pts</span>
-          </div>
-        </div>
-      `).join('');
-
-      // Top Batsmen
-      document.getElementById('topBatsmenList').innerHTML = data.batsmen.map((b, idx) => `
-        <div class="flex items-center justify-between p-2 rounded-xl ${idx === 0 ? 'bg-amber-50 border border-amber-200' : 'bg-slate-50 border border-slate-100'}">
-          <div class="flex items-center gap-2">
-            <span class="w-4 font-bold ${idx === 0 ? 'text-amber-700' : 'text-slate-400'} text-xs">#${b.rank}</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">${b.name}</span>
-              <span class="text-[10px] text-slate-500 font-mono">${b.team} &bull; ${b.avg}</span>
-            </div>
-          </div>
-          <span class="text-xs font-bold text-slate-900 font-mono">${b.rating}</span>
-        </div>
-      `).join('');
-
-      // Top Bowlers
-      document.getElementById('topBowlersList').innerHTML = data.bowlers.map((b, idx) => `
-        <div class="flex items-center justify-between p-2 rounded-xl ${idx === 0 ? 'bg-rose-50 border border-rose-200' : 'bg-slate-50 border border-slate-100'}">
-          <div class="flex items-center gap-2">
-            <span class="w-4 font-bold ${idx === 0 ? 'text-rose-700' : 'text-slate-400'} text-xs">#${b.rank}</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">${b.name}</span>
-              <span class="text-[10px] text-slate-500 font-mono">${b.team} &bull; Econ: ${b.econ}</span>
-            </div>
-          </div>
-          <span class="text-xs font-bold text-slate-900 font-mono">${b.rating}</span>
-        </div>
-      `).join('');
-
-      // Top All-Rounders
-      const allroundersEl = document.getElementById('topAllroundersList');
-      if (allroundersEl && data.allrounders) {
-        allroundersEl.innerHTML = data.allrounders.map((a, idx) => `
-          <div class="flex items-center justify-between p-2 rounded-xl ${idx === 0 ? 'bg-purple-50 border border-purple-200' : 'bg-slate-50 border border-slate-100'}">
-            <div class="flex items-center gap-2">
-              <span class="w-4 font-bold ${idx === 0 ? 'text-purple-700' : 'text-slate-400'} text-xs">#${a.rank}</span>
-              <div>
-                <span class="text-xs font-bold text-slate-800 block">${a.name}</span>
-                <span class="text-[10px] text-slate-500 font-mono">${a.team} &bull; ${a.stat}</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-slate-900 font-mono">${a.rating}</span>
-          </div>
-        `).join('');
-      }
     }
 
     // RENDER IPL

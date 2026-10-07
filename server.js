@@ -468,130 +468,804 @@ const RECENT_MATCHES = [
 
 const UPCOMING_MATCHES = [
   {
-    "id": "up-zimw-wiw-3",
+    "id": "up-129707",
     "match": "Zimbabwe Women vs West Indies Women - 3rd T20I",
     "format": "T20I",
-    "tournament": "West Indies Women tour of Zimbabwe, 2026",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "05:00 PM IST (01:30 PM Local)",
-    "venue": "Takashinga Sports Club, Harare, Zimbabwe",
-    "broadcast": "FanCode, ZC Live",
+    "tournament": "West Indies Women in Zimbabwe • 3rd T20I",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "03:30 PM IST",
+    "venue": "Takashinga Sports Club, Highfield, Harare, Harare",
+    "broadcast": "FanCode, Willow TV",
     "teams": {
       "home": "Zimbabwe Women",
-      "away": "West Indies Women"
-    }
+      "away": "West Indies Women",
+      "homeShort": "ZIM-W",
+      "awayShort": "WI-W"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791367200000
   },
   {
-    "id": "up-swd-lions-pro20",
+    "id": "up-129241",
     "match": "South Western Districts vs Lions - Pool A",
     "format": "T20",
-    "tournament": "CSA Pro20 Cup",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "05:30 PM IST (02:00 PM Local)",
-    "venue": "Recreation Ground, Oudtshoorn",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Recreation Ground, Oudtshoorn, Oudtshoorn",
     "broadcast": "SuperSport, FanCode",
     "teams": {
       "home": "South Western Districts",
-      "away": "Lions"
-    }
+      "away": "Lions",
+      "homeShort": "SWD",
+      "awayShort": "LIONS"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791370800000
   },
   {
-    "id": "up-usa-nam-cwc",
-    "match": "USA vs Namibia - 130th Match",
+    "id": "up-129566",
+    "match": "United States of America vs Namibia - 129th Match",
     "format": "ODI",
-    "tournament": "ICC Men's Cricket World Cup League 2",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "08:30 PM IST (10:00 AM Local)",
-    "venue": "Grand Prairie Cricket Stadium, Dallas, Texas",
-    "broadcast": "FanCode, Willow TV",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 129th Match",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Grand Prairie Stadium, Dallas, Dallas",
+    "broadcast": "ICC.tv, FanCode",
     "teams": {
-      "home": "USA",
-      "away": "Namibia"
-    }
+      "home": "United States of America",
+      "away": "Namibia",
+      "homeShort": "USA",
+      "awayShort": "NAM"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791385200000
   },
   {
-    "id": "up-pakch-wich-wcl",
-    "match": "Pakistan Champions vs West Indies Champions",
+    "id": "up-129239",
+    "match": "Knights vs KwaZulu-Natal Inland - Pool B",
     "format": "T20",
-    "tournament": "World Championship of Legends 2026",
-    "date": "Wednesday, 07 Oct 2026",
-    "time": "08:00 PM IST",
-    "venue": "Sharjah Cricket Stadium, Sharjah, UAE",
-    "broadcast": "Star Sports Network, FanCode",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Mangaung Oval, Bloemfontein, Bloemfontein",
+    "broadcast": "SuperSport, FanCode",
     "teams": {
-      "home": "Pakistan Champions",
-      "away": "West Indies Champions"
-    }
+      "home": "Knights",
+      "away": "KwaZulu-Natal Inland",
+      "homeShort": "KNGHT",
+      "awayShort": "KZNIN"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791388800000
   },
   {
-    "id": "up-ind-wi-2",
-    "match": "India vs West Indies - 2nd T20I",
-    "format": "T20I",
-    "tournament": "West Indies tour of India, 2026",
-    "date": "Friday, 09 Oct 2026",
-    "time": "07:00 PM IST",
-    "venue": "Arun Jaitley Stadium, New Delhi",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "West Indies"
-    }
-  },
-  {
-    "id": "up-indch-pakch-wcl",
-    "match": "India Champions vs Pakistan Champions",
+    "id": "up-129240",
+    "match": "Titans vs South Africa Emerging Players - Pool B",
     "format": "T20",
-    "tournament": "World Championship of Legends 2026 (Marquee)",
-    "date": "Saturday, 10 Oct 2026",
-    "time": "08:00 PM IST",
-    "venue": "Dubai International Cricket Stadium, Dubai, UAE",
-    "broadcast": "Star Sports Network, FanCode",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Wednesday, Oct 07, 2026",
+    "time": "09:30 PM IST",
+    "venue": "SuperSport Park, Centurion, Centurion",
+    "broadcast": "SuperSport, FanCode",
     "teams": {
-      "home": "India Champions",
-      "away": "Pakistan Champions"
-    }
+      "home": "Titans",
+      "away": "South Africa Emerging Players",
+      "homeShort": "TITNS",
+      "awayShort": "SA-EM"
+    },
+    "isToday": true,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791388800000
   },
   {
-    "id": "up-ind-wi-3",
-    "match": "India vs West Indies - 3rd T20I",
-    "format": "T20I",
-    "tournament": "West Indies tour of India, 2026",
-    "date": "Sunday, 11 Oct 2026",
-    "time": "07:00 PM IST",
-    "venue": "Eden Gardens, Kolkata",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "West Indies"
-    }
-  },
-  {
-    "id": "up-ind-nz-test-1",
-    "match": "India vs New Zealand - 1st Test",
+    "id": "up-127796",
+    "match": "New South Wales vs Tasmania - 2nd Match",
     "format": "TEST",
-    "tournament": "New Zealand tour of India, 2026",
-    "date": "Wednesday, 16 Oct 2026",
-    "time": "09:30 AM IST",
-    "venue": "M. Chinnaswamy Stadium, Bengaluru",
-    "broadcast": "Sports18 Network, JioCinema",
-    "teams": {
-      "home": "India",
-      "away": "New Zealand"
-    }
-  },
-  {
-    "id": "up-aus-pak-odi-1",
-    "match": "Australia vs Pakistan - 1st ODI",
-    "format": "ODI",
-    "tournament": "Pakistan tour of Australia, 2026",
-    "date": "Monday, 19 Oct 2026",
-    "time": "09:00 AM IST",
-    "venue": "Melbourne Cricket Ground (MCG), Melbourne, Australia",
+    "tournament": "Sheffield Shield • 2nd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "05:00 AM IST",
+    "venue": "Cricket Central, Sydney, Sydney",
     "broadcast": "Star Sports Network, Disney+ Hotstar",
     "teams": {
-      "home": "Australia",
-      "away": "Pakistan"
-    }
+      "home": "New South Wales",
+      "away": "Tasmania",
+      "homeShort": "NSW",
+      "awayShort": "TAS"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791415800000
+  },
+  {
+    "id": "up-129582",
+    "match": "Kuwait vs Thailand - 7th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 7th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Kuwait",
+      "away": "Thailand",
+      "homeShort": "KUW",
+      "awayShort": "THA"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-129583",
+    "match": "Bhutan vs Mongolia - 8th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 8th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bhutan",
+      "away": "Mongolia",
+      "homeShort": "BHU",
+      "awayShort": "MNG"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-129584",
+    "match": "Bahrain vs Myanmar - 9th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 9th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bahrain",
+      "away": "Myanmar",
+      "homeShort": "BHR",
+      "awayShort": "MYAN"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791422100000
+  },
+  {
+    "id": "up-127797",
+    "match": "Western Australia vs Queensland - 3rd Match",
+    "format": "TEST",
+    "tournament": "Sheffield Shield • 3rd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "08:00 AM IST",
+    "venue": "Western Australia Cricket Association Ground, Perth, Perth",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "Western Australia",
+      "away": "Queensland",
+      "homeShort": "WA",
+      "awayShort": "QLD"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791426600000
+  },
+  {
+    "id": "up-129628",
+    "match": "Bangladesh Women Under-19s vs Sri Lanka Women Under-19s - 5th Match",
+    "format": "T20",
+    "tournament": "Pakistan Women's Under-19s T20 Tri-Series • 5th Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "10:30 AM IST",
+    "venue": "Iqbal Stadium, Faisalabad, Faisalabad",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Bangladesh Women Under-19s",
+      "away": "Sri Lanka Women Under-19s",
+      "homeShort": "BAW19",
+      "awayShort": "SLW19"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791435600000
+  },
+  {
+    "id": "up-129597",
+    "match": "China vs Maldives - 1st Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 1st Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "China",
+      "away": "Maldives",
+      "homeShort": "CHN",
+      "awayShort": "MDV"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129598",
+    "match": "Saudi Arabia vs Singapore - 2nd Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 2nd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Saudi Arabia",
+      "away": "Singapore",
+      "homeShort": "KSA",
+      "awayShort": "SGP"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129599",
+    "match": "Malaysia vs Hong Kong - 3rrd Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 3rrd Match",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Malaysia",
+      "away": "Hong Kong",
+      "homeShort": "MAS",
+      "awayShort": "HKG"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791439200000
+  },
+  {
+    "id": "up-129242",
+    "match": "Boland vs Easterns - Pool B",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Boland Park, Paarl, Paarl",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Boland",
+      "away": "Easterns",
+      "homeShort": "BOL",
+      "awayShort": "EASTN"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791475200000
+  },
+  {
+    "id": "up-129243",
+    "match": "Warriors vs Northern Cape - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Thursday, Oct 08, 2026",
+    "time": "09:30 PM IST",
+    "venue": "St George's Park, Gqeberha, Gqeberha",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Warriors",
+      "away": "Northern Cape",
+      "homeShort": "WAR",
+      "awayShort": "NCAPE"
+    },
+    "isToday": false,
+    "isTomorrow": true,
+    "isIndia": false,
+    "sortTime": 1791475200000
+  },
+  {
+    "id": "up-129585",
+    "match": "Mongolia vs Thailand - 10th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 10th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Mongolia",
+      "away": "Thailand",
+      "homeShort": "MNG",
+      "awayShort": "THA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-129586",
+    "match": "Bahrain vs Kuwait - 11th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 11th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Bahrain",
+      "away": "Kuwait",
+      "homeShort": "BHR",
+      "awayShort": "KUW"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-129587",
+    "match": "Qatar vs Myanmar - 12th Match",
+    "format": "T20I",
+    "tournament": "Men's T20 World Cup Sub Regional Asia Qualifier A • 12th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "06:45 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Qatar",
+      "away": "Myanmar",
+      "homeShort": "QAT",
+      "awayShort": "MYAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791508500000
+  },
+  {
+    "id": "up-126591",
+    "match": "India A vs Australia A - 2nd unofficial ODI",
+    "format": "ODI",
+    "tournament": "Australia A in India • 2nd unofficial ODI",
+    "date": "Friday, Oct 09, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Cricket Association Pondicherry Siechem Ground, Puducherry",
+    "broadcast": "Sports18 Network, JioCinema",
+    "teams": {
+      "home": "India A",
+      "away": "Australia A",
+      "homeShort": "IND-A",
+      "awayShort": "AUS-A"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": true,
+    "sortTime": 1791516600000
+  },
+  {
+    "id": "up-125164",
+    "match": "Australia Women vs Bangladesh Women - 1st ODI",
+    "format": "ODI",
+    "tournament": "Bangladesh Women in Australia • 1st ODI",
+    "date": "Friday, Oct 09, 2026",
+    "time": "09:20 AM IST",
+    "venue": "Allan Border Field, Brisbane, Brisbane",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "Australia Women",
+      "away": "Bangladesh Women",
+      "homeShort": "AUS-W",
+      "awayShort": "BAN-W"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791517800000
+  },
+  {
+    "id": "up-129629",
+    "match": "Pakistan Women Under-19s vs Sri Lanka Women Under-19s - 6th Match",
+    "format": "T20",
+    "tournament": "Pakistan Women's Under-19s T20 Tri-Series • 6th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "10:30 AM IST",
+    "venue": "Iqbal Stadium, Faisalabad, Faisalabad",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Pakistan Women Under-19s",
+      "away": "Sri Lanka Women Under-19s",
+      "homeShort": "PAW19",
+      "awayShort": "SLW19"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791522000000
+  },
+  {
+    "id": "up-129570",
+    "match": "Oman vs Canada - 130th Match",
+    "format": "ODI",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 130th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Al Amerat Cricket Ground Oman Cricket (Ministry Turf 1), Al Amarat",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Oman",
+      "away": "Canada",
+      "homeShort": "OMA",
+      "awayShort": "CAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129600",
+    "match": "Malaysia vs Saudi Arabia - 4th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 4th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Bayuemas Oval, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Malaysia",
+      "away": "Saudi Arabia",
+      "homeShort": "MAS",
+      "awayShort": "KSA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129601",
+    "match": "China vs Hong Kong - 5th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 5th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "YSD-UKM Cricket Oval, Bangi, Bangi",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "China",
+      "away": "Hong Kong",
+      "homeShort": "CHN",
+      "awayShort": "HKG"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129602",
+    "match": "Maldives vs Singapore - 6th Match",
+    "format": "T20I",
+    "tournament": "T20 World Cup Sub Regional Asia Qualifier 2026 • 6th Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Selangor Turf Club, Kuala Lumpur, Kuala Lumpur",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Maldives",
+      "away": "Singapore",
+      "homeShort": "MDV",
+      "awayShort": "SGP"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-129711",
+    "match": "Afghanistan vs Bangladesh - Only Test",
+    "format": "TEST",
+    "tournament": "Afghanistan v Bangladesh • Only Test",
+    "date": "Friday, Oct 09, 2026",
+    "time": "11:30 AM IST",
+    "venue": "Zayed Cricket Stadium, Abu Dhabi, Abu Dhabi",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Afghanistan",
+      "away": "Bangladesh",
+      "homeShort": "AFG",
+      "awayShort": "BAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791525600000
+  },
+  {
+    "id": "up-124654",
+    "match": "South Africa vs Australia - 1st Test",
+    "format": "TEST",
+    "tournament": "Australia in South Africa • 1st Test",
+    "date": "Friday, Oct 09, 2026",
+    "time": "01:00 PM IST",
+    "venue": "Kingsmead, Durban, Durban",
+    "broadcast": "Star Sports Network, Disney+ Hotstar",
+    "teams": {
+      "home": "South Africa",
+      "away": "Australia",
+      "homeShort": "SA",
+      "awayShort": "AUS"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791531000000
+  },
+  {
+    "id": "up-129244",
+    "match": "Border vs Dolphins - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Friday, Oct 09, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Buffalo Park, KuGumpo City, KuGompo City",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Border",
+      "away": "Dolphins",
+      "homeShort": "BOR",
+      "awayShort": "DOLPH"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791543600000
+  },
+  {
+    "id": "up-125391",
+    "match": "India vs West Indies - 2nd T20I",
+    "format": "T20I",
+    "tournament": "West Indies in India • 2nd T20I",
+    "date": "Friday, Oct 09, 2026",
+    "time": "07:00 PM IST",
+    "venue": "JSCA International Stadium Complex, Ranchi, Ranchi",
+    "broadcast": "Sports18 Network, JioCinema",
+    "teams": {
+      "home": "India",
+      "away": "West Indies",
+      "homeShort": "IND",
+      "awayShort": "WI"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": true,
+    "sortTime": 1791552600000
+  },
+  {
+    "id": "up-128951",
+    "match": "Pakistan vs Sri Lanka - 1st T20I",
+    "format": "T20I",
+    "tournament": "Sri Lanka in Pakistan • 1st T20I",
+    "date": "Friday, Oct 09, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Rawalpindi Cricket Stadium, Rawalpindi",
+    "broadcast": "FanCode, Sony Sports Network",
+    "teams": {
+      "home": "Pakistan",
+      "away": "Sri Lanka",
+      "homeShort": "PAK",
+      "awayShort": "SL"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791558000000
+  },
+  {
+    "id": "up-129567",
+    "match": "Namibia vs United Arab Emirates - 131st Match",
+    "format": "ODI",
+    "tournament": "ICC Men's Cricket World Cup League 2 • 131st Match",
+    "date": "Friday, Oct 09, 2026",
+    "time": "08:30 PM IST",
+    "venue": "Grand Prairie Stadium, Dallas, Dallas",
+    "broadcast": "ICC.tv, FanCode",
+    "teams": {
+      "home": "Namibia",
+      "away": "United Arab Emirates",
+      "homeShort": "NAM",
+      "awayShort": "UAE"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791558000000
+  },
+  {
+    "id": "up-129751",
+    "match": "Sylhet Division vs Dhaka Division - 5th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 5th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sylhet International Cricket Stadium, Sylhet",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Sylhet Division",
+      "away": "Dhaka Division",
+      "homeShort": "SYL",
+      "awayShort": "DHA"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129752",
+    "match": "Mymensingh Division vs Rangpur Division - 6th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 6th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sylhet International Cricket Stadium, Academy Ground, Sylhet",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Mymensingh Division",
+      "away": "Rangpur Division",
+      "homeShort": "MYMS",
+      "awayShort": "RAN"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129753",
+    "match": "Khulna Division vs Rajshahi Division - 7th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 7th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Shere Bangla National Stadium, Mirpur, Dhaka",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Khulna Division",
+      "away": "Rajshahi Division",
+      "homeShort": "KHU",
+      "awayShort": "RAJ"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129754",
+    "match": "Chattogram Division vs Barishal Division - 8th Match",
+    "format": "TEST",
+    "tournament": "National Cricket League • 8th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:00 AM IST",
+    "venue": "Sheikh Kamal International Cricket Stadium Academy Ground, Cox's Bazar, Cox's Bazar",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Chattogram Division",
+      "away": "Barishal Division",
+      "homeShort": "CHATT",
+      "awayShort": "BAR"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791603000000
+  },
+  {
+    "id": "up-129509",
+    "match": "Titans Women vs Lions Women - 4th Match",
+    "format": "ODI",
+    "tournament": "CSA Women Pro50 Series • 4th Match",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "01:30 PM IST",
+    "venue": "SuperSport Park, Centurion, Centurion",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Titans Women",
+      "away": "Lions Women",
+      "homeShort": "TTN-W",
+      "awayShort": "LIO-W"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791619200000
+  },
+  {
+    "id": "up-129246",
+    "match": "Mpumalanga vs Western Province - Pool B",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool B",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "04:30 PM IST",
+    "venue": "Uplands College, White River, White River",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "Mpumalanga",
+      "away": "Western Province",
+      "homeShort": "MPUMA",
+      "awayShort": "WPR"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791630000000
+  },
+  {
+    "id": "up-129245",
+    "match": "North West vs South Western Districts - Pool A",
+    "format": "T20",
+    "tournament": "CSA Pro20 Cup • Pool A",
+    "date": "Saturday, Oct 10, 2026",
+    "time": "09:30 PM IST",
+    "venue": "Senwes Park, Potchefstroom, Potchefstroom",
+    "broadcast": "SuperSport, FanCode",
+    "teams": {
+      "home": "North West",
+      "away": "South Western Districts",
+      "homeShort": "NWEST",
+      "awayShort": "SWD"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791648000000
+  },
+  {
+    "id": "up-129733",
+    "match": "Pakistan Association of Hong Kong vs United Services Recreation Club - 2nd Match",
+    "format": "ODI",
+    "tournament": "HKPL One-Day Tournament • 2nd Match",
+    "date": "Sunday, Oct 11, 2026",
+    "time": "06:30 AM IST",
+    "venue": "Mission Road Ground, Mong Kok, Hong Kong, Mong Kok",
+    "broadcast": "FanCode, Willow TV",
+    "teams": {
+      "home": "Pakistan Association of Hong Kong",
+      "away": "United Services Recreation Club",
+      "homeShort": "PAHKG",
+      "awayShort": "USRC"
+    },
+    "isToday": false,
+    "isTomorrow": false,
+    "isIndia": false,
+    "sortTime": 1791680400000
   }
 ];
 
@@ -1043,6 +1717,158 @@ async function getOfficialCricinfoResults() {
   }
 }
 
+
+let upcomingCache = {
+  data: [],
+  lastFetch: 0
+};
+
+async function getOfficialCricinfoUpcoming() {
+  const now = Date.now();
+  if (upcomingCache.data && upcomingCache.data.length > 0 && (now - upcomingCache.lastFetch < 60000)) {
+    return upcomingCache.data;
+  }
+
+  try {
+    const res = await fetch('https://www.espncricinfo.com/live-cricket-match-schedule-fixtures', {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    if (!res.ok) throw new Error('Cricinfo schedule status ' + res.status);
+    const html = await res.text();
+    const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    if (!m) return upcomingCache.data;
+
+    const data = JSON.parse(m[1]);
+    const allMatches = [];
+    function traverse(obj) {
+      if (!obj || typeof obj !== 'object') return;
+      if (obj.id && obj.teams && (obj.startDate || obj.scheduledDate || obj.statusText)) {
+        allMatches.push(obj);
+        return;
+      }
+      for (const key of Object.keys(obj)) {
+        traverse(obj[key]);
+      }
+    }
+    traverse(data.props?.appPageProps);
+
+    const istFormatter = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const todayISTStr = istFormatter.format(new Date());
+    const tomorrowISTStr = istFormatter.format(new Date(Date.now() + 24 * 3600 * 1000));
+
+    const seen = new Set();
+    const upcomingList = [];
+
+    for (const match of allMatches) {
+      const mId = String(match.id);
+      if (seen.has(mId)) continue;
+      seen.add(mId);
+
+      // Strict filter: Match must not be LIVE or POST or completed
+      if (match.state === 'LIVE' || match.state === 'POST' || match.status === 'RESULT') continue;
+      const txt = (match.statusText || match.status || '').toLowerCase();
+      if (txt.includes('won by') || txt.includes('tied') || txt.includes('drawn') || txt.includes('abandoned') || txt.includes('stumps') || txt.includes('tea') || txt.includes('lunch') || txt.includes('innings break') || (txt.includes('delay') && match.state !== 'PRE')) {
+        continue;
+      }
+      if (match.state !== 'PRE' && !(/scheduled/i.test(txt) || /yet to begin/i.test(txt) || /starts in/i.test(txt))) {
+        continue;
+      }
+
+      const t1Obj = match.teams?.[0]?.team || {};
+      const t2Obj = match.teams?.[1]?.team || {};
+      const t1 = t1Obj.longName || t1Obj.name || t1Obj.abbreviation || 'Team 1';
+      const t2 = t2Obj.longName || t2Obj.name || t2Obj.abbreviation || 'Team 2';
+
+      const timeIso = match.startTime || match.startDate;
+      if (!timeIso) continue;
+      const matchTime = new Date(timeIso);
+      if (isNaN(matchTime.getTime())) continue;
+
+      const matchISTStr = istFormatter.format(matchTime);
+      if (matchISTStr < todayISTStr) continue;
+
+      const isToday = (matchISTStr === todayISTStr);
+      const isTomorrow = (matchISTStr === tomorrowISTStr);
+
+      let format = match.format || 'T20';
+      const seriesName = (match.series?.name || match.series?.longName || '').trim();
+      const seriesLow = (seriesName + ' ' + (match.title || '')).toLowerCase();
+      if (format === 'T20' && (seriesLow.includes('international') || seriesLow.includes('t20i') || seriesLow.includes('tour') || seriesLow.includes('qualifier') || seriesLow.includes('world cup'))) {
+        format = 'T20I';
+      } else if (seriesLow.includes('test') || seriesLow.includes('shield') || seriesLow.includes('trophy') || seriesLow.includes('ranji') || seriesLow.includes('4-day')) {
+        format = 'TEST';
+      } else if (seriesLow.includes('odi') || seriesLow.includes('one-day') || seriesLow.includes('pro50') || seriesLow.includes('league 2')) {
+        format = 'ODI';
+      }
+
+      const formattedDate = matchTime.toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata', weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' });
+
+      let timeText = '';
+      if (match.startTime) {
+        timeText = matchTime.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: true }) + ' IST';
+      } else {
+        timeText = isToday ? 'Scheduled for today • Match yet to begin' : 'Scheduled';
+      }
+
+      const groundName = (match.ground?.longName || match.ground?.name || '').trim();
+      const townName = (match.ground?.town?.name || match.ground?.country?.name || '').trim();
+      const venue = groundName ? `${groundName}${townName ? ', ' + townName : ''}` : 'International Cricket Stadium';
+
+      const isIndia = (t1.toLowerCase().includes('india') || t2.toLowerCase().includes('india') || seriesLow.includes('india'));
+      let broadcast = 'FanCode, Willow TV';
+      if (isIndia) broadcast = 'Sports18 Network, JioCinema';
+      else if (seriesLow.includes('australia') || seriesLow.includes('shield')) broadcast = 'Star Sports Network, Disney+ Hotstar';
+      else if (seriesLow.includes('pakistan')) broadcast = 'FanCode, Sony Sports Network';
+      else if (seriesLow.includes('csa') || seriesLow.includes('south africa')) broadcast = 'SuperSport, FanCode';
+      else if (seriesLow.includes('world cup') || seriesLow.includes('qualifier')) broadcast = 'ICC.tv, FanCode';
+
+      const cleanTitle = (match.title || '').trim();
+      const tourTitle = seriesName ? `${seriesName}${cleanTitle ? ' • ' + cleanTitle : ''}` : (cleanTitle || 'Cricket Series');
+
+      upcomingList.push({
+        id: `up-${mId}`,
+        match: `${t1} vs ${t2}${cleanTitle ? ' - ' + cleanTitle : ''}`,
+        format: format,
+        tournament: tourTitle,
+        date: formattedDate,
+        time: timeText,
+        venue: venue,
+        broadcast: broadcast,
+        teams: {
+          home: t1,
+          away: t2,
+          homeShort: t1Obj.abbreviation || t1,
+          awayShort: t2Obj.abbreviation || t2
+        },
+        isToday: isToday,
+        isTomorrow: isTomorrow,
+        isIndia: isIndia,
+        sortTime: matchTime.getTime()
+      });
+    }
+
+    upcomingList.sort((a, b) => {
+      if (a.isToday && !b.isToday) return -1;
+      if (!a.isToday && b.isToday) return 1;
+      if (a.isTomorrow && !b.isTomorrow) return -1;
+      if (!a.isTomorrow && b.isTomorrow) return 1;
+      if (a.sortTime !== b.sortTime) return a.sortTime - b.sortTime;
+      if (a.isIndia && !b.isIndia) return -1;
+      if (!a.isIndia && b.isIndia) return 1;
+      return 0;
+    });
+
+    upcomingCache.data = upcomingList;
+    upcomingCache.lastFetch = now;
+    return upcomingList;
+  } catch (err) {
+    console.error('Error fetching Cricinfo upcoming schedule:', err.message);
+    return upcomingCache.data || [];
+  }
+}
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
 
@@ -1170,98 +1996,26 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (url.pathname === '/api/upcoming') {
+    const officialUpcoming = await getOfficialCricinfoUpcoming();
     const liveMatches = await getRealLiveScores();
-    // Exclude titles ONLY if they are truly IN PLAY right now!
-    const liveInPlayTitles = (liveMatches || [])
+
+    const liveInPlay = (liveMatches || [])
       .filter(lm => lm && lm.isLive)
       .map(lm => (lm.title || '').toLowerCase());
 
-    // 1. Extract live upcoming matches (today's scheduled matches from live feed)
-    const liveUpcoming = (liveMatches || [])
-      .filter(m => {
-        if (!m || m.isLive) return false;
-        const txt = (m.statusText || m.status || '').toLowerCase();
-        if (m.state === 'COMPLETED' || m.status === 'RESULT' || txt.includes('won by') || txt.includes('tied') || txt.includes('drawn') || txt.includes('abandoned')) return false;
-        return m.state === 'UPCOMING' || m.status === 'Scheduled' || /starts/i.test(txt) || /scheduled/i.test(txt) || /yet to begin/i.test(txt);
-      })
-      .map(m => {
-        const t1 = m.teams?.[0]?.name || 'Team 1';
-        const t2 = m.teams?.[1]?.name || 'Team 2';
-        let format = 'T20';
-        const sLower = (m.series || m.title || '').toLowerCase();
-        if (sLower.includes('test') || sLower.includes('4-day')) format = 'TEST';
-        else if (sLower.includes('odi') || sLower.includes('world cup') || sLower.includes('league 2')) format = 'ODI';
-        else if (sLower.includes('t20')) format = 'T20';
+    const baseList = (officialUpcoming && officialUpcoming.length > 0) ? officialUpcoming : UPCOMING_MATCHES;
 
-        return {
-          id: `live-up-${m.id}`,
-          match: `${t1} vs ${t2}${m.stage ? ' - ' + m.stage : ''}`,
-          format: format,
-          tournament: m.stage ? `${m.stage} • ${m.series}` : (m.series || 'International Cricket'),
-          date: 'Wednesday, 07 Oct 2026',
-          time: m.statusText || 'Scheduled for today',
-          venue: m.venue || 'International Ground',
-          broadcast: 'FanCode, Willow TV, JioCinema',
-          teams: {
-            home: t1,
-            away: t2
-          },
-          isToday: true,
-          feedMatch: m
-        };
-      });
-
-    const now = new Date();
-    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-    function normT(n) {
-      return (n || '')
-        .toLowerCase()
-        .replace(/[^a-z]/g, '')
-        .replace('zimbabwe', 'zim')
-        .replace('westindies', 'wi')
-        .replace('southwesterndistricts', 'swd')
-        .replace('swestd', 'swd')
-        .replace('unitedstatesofamerica', 'usa')
-        .replace('unitedstates', 'usa');
-    }
-
-    const validUpcoming = UPCOMING_MATCHES.filter(m => {
-      const home = normT(m.teams?.home);
-      const away = normT(m.teams?.away);
-
-      // Check if already covered in liveUpcoming
-      const alreadyInLive = liveUpcoming.some(lu => {
-        const luHome = normT(lu.teams?.home);
-        const luAway = normT(lu.teams?.away);
-        return (luHome.includes(home) || home.includes(luHome)) && (luAway.includes(away) || away.includes(luAway));
-      });
-      if (alreadyInLive) return false;
-
-      // Exclude if already in play
-      if (home && away && liveInPlayTitles.some(t => {
-        const tNorm = normT(t);
-        return tNorm.includes(home) && tNorm.includes(away);
-      })) {
+    const filteredUpcoming = baseList.filter(m => {
+      const t1 = (m.teams?.home || '').toLowerCase();
+      const t2 = (m.teams?.away || '').toLowerCase();
+      if (t1 && t2 && liveInPlay.some(lp => lp.includes(t1) && lp.includes(t2))) {
         return false;
-      }
-
-      // Dynamic date check
-      if (m.date) {
-        const dateMatch = m.date.match(/(\d{1,2}\s+[A-Za-z]{3}\s+\d{4})/);
-        if (dateMatch) {
-          const matchDate = new Date(dateMatch[1]);
-          if (matchDate < startOfToday) {
-            return false;
-          }
-        }
       }
       return true;
     });
 
-    const allUpcoming = [...liveUpcoming, ...validUpcoming];
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(allUpcoming));
+    res.end(JSON.stringify(filteredUpcoming));
     return;
   }
 
