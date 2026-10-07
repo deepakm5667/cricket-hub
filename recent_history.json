@@ -1,0 +1,664 @@
+[
+  {
+    "id": "126597",
+    "country": "AUS Under-19 & IND Under-19",
+    "format": "TEST",
+    "series": "Australia Under-19s in India",
+    "date": "Recent",
+    "venue": "Narendra Modi Stadium B Ground, Motera, Ahmedabad, Ahmedabad",
+    "result": "IND Under-19 won by 10 wickets",
+    "winnerName": "IND Under-19",
+    "loserName": "AUS Under-19",
+    "team1": {
+      "name": "AUS Under-19",
+      "score": "174 & 151",
+      "overs": "",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "IND Under-19",
+      "score": "315 & 11/0",
+      "overs": "T:11",
+      "isWinner": true
+    },
+    "potm": "Official Result",
+    "scorecard": {
+      "summary": "IND Under-19 won by 10 wickets",
+      "keyBatters": "Sagar Virk 2 (1), Lakshya Raichandani 9 (4)",
+      "keyBowlers": "Spencer Green 0/11"
+    }
+  },
+  {
+    "id": "recent-ind-wi-1",
+    "country": "India & West Indies",
+    "format": "T20I",
+    "series": "1st T20I • West Indies tour of India, 2026",
+    "date": "06 Oct 2026",
+    "venue": "BRSABV Ekana Cricket Stadium, Lucknow",
+    "result": "India won by 8 wkts",
+    "winnerName": "India",
+    "loserName": "West Indies",
+    "team1": {
+      "name": "West Indies",
+      "score": "171",
+      "overs": "19.1",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "India",
+      "score": "172-2",
+      "overs": "14.4",
+      "isWinner": true
+    },
+    "potm": "Shreyas Iyer (102* off 43b)",
+    "scorecard": {
+      "team1Innings": [
+        {
+          "name": "Brandon King",
+          "dismissal": "c Samson b Naman Dhir",
+          "runs": 45,
+          "balls": 32
+        },
+        {
+          "name": "Evin Lewis",
+          "dismissal": "b Bumrah",
+          "runs": 14,
+          "balls": 11
+        },
+        {
+          "name": "Shai Hope (c & wk)",
+          "dismissal": "c Suryakumar b Naman Dhir",
+          "runs": 18,
+          "balls": 15
+        },
+        {
+          "name": "Shimron Hetmyer",
+          "dismissal": "c Pandya b Bumrah",
+          "runs": 38,
+          "balls": 21
+        },
+        {
+          "name": "Rovman Powell",
+          "dismissal": "c Rinku b Arshdeep",
+          "runs": 22,
+          "balls": 16
+        },
+        {
+          "name": "Sherfane Rutherford",
+          "dismissal": "c Hardik b Naman Dhir",
+          "runs": 12,
+          "balls": 9
+        },
+        {
+          "name": "Romario Shepherd",
+          "dismissal": "run out (Axar)",
+          "runs": 8,
+          "balls": 5
+        },
+        {
+          "name": "Akeal Hosein",
+          "dismissal": "b Arshdeep",
+          "runs": 5,
+          "balls": 4
+        },
+        {
+          "name": "Gudakesh Motie",
+          "dismissal": "not out",
+          "runs": 4,
+          "balls": 2
+        },
+        {
+          "name": "Alzarri Joseph",
+          "dismissal": "b Axar",
+          "runs": 1,
+          "balls": 3
+        }
+      ],
+      "team1Bowling": [
+        {
+          "bowler": "Naman Dhir",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "28",
+          "wickets": "3",
+          "econ": "7.00"
+        },
+        {
+          "bowler": "Jasprit Bumrah",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "24",
+          "wickets": "2",
+          "econ": "6.00"
+        },
+        {
+          "bowler": "Arshdeep Singh",
+          "overs": "3.1",
+          "maidens": "0",
+          "runs": "32",
+          "wickets": "2",
+          "econ": "10.10"
+        },
+        {
+          "bowler": "Axar Patel",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "38",
+          "wickets": "1",
+          "econ": "9.50"
+        },
+        {
+          "bowler": "Hardik Pandya",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "45",
+          "wickets": "0",
+          "econ": "11.25"
+        }
+      ],
+      "team2Innings": [
+        {
+          "name": "Shreyas Iyer",
+          "dismissal": "not out",
+          "runs": 102,
+          "balls": 43
+        },
+        {
+          "name": "Sanju Samson (wk)",
+          "dismissal": "c Hope b Joseph",
+          "runs": 36,
+          "balls": 24
+        },
+        {
+          "name": "Abhishek Sharma",
+          "dismissal": "c King b Motie",
+          "runs": 7,
+          "balls": 6
+        },
+        {
+          "name": "Suryakumar Yadav (c)",
+          "dismissal": "not out",
+          "runs": 25,
+          "balls": 14
+        }
+      ],
+      "team2Bowling": [
+        {
+          "bowler": "Gudakesh Motie",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "32",
+          "wickets": "1",
+          "econ": "10.67"
+        },
+        {
+          "bowler": "Alzarri Joseph",
+          "overs": "3.4",
+          "maidens": "0",
+          "runs": "39",
+          "wickets": "1",
+          "econ": "10.63"
+        },
+        {
+          "bowler": "Akeal Hosein",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "34",
+          "wickets": "0",
+          "econ": "11.33"
+        },
+        {
+          "bowler": "Romario Shepherd",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "41",
+          "wickets": "0",
+          "econ": "13.67"
+        },
+        {
+          "bowler": "Shamar Joseph",
+          "overs": "2.0",
+          "maidens": "0",
+          "runs": "26",
+          "wickets": "0",
+          "econ": "13.00"
+        }
+      ],
+      "summary": "Shreyas Iyer smashed an exhilarating unbeaten century (102* off 43 balls) while Naman Dhir took 3/28 to power India to a dominant 8-wicket win over West Indies in the 1st T20I at Lucknow."
+    }
+  },
+  {
+    "id": "recent-uae-usa-cwc",
+    "country": "USA & UAE",
+    "format": "ODI",
+    "series": "129th Match • ICC Cricket World Cup League 2",
+    "date": "05 Oct 2026",
+    "venue": "Grand Prairie Stadium, Dallas, Texas",
+    "result": "United States of America won by 6 wkts",
+    "winnerName": "United States of America",
+    "loserName": "United Arab Emirates",
+    "team1": {
+      "name": "United Arab Emirates",
+      "score": "330-8",
+      "overs": "50.0",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "United States of America",
+      "score": "332-4",
+      "overs": "48.5",
+      "isWinner": true
+    },
+    "potm": "Milind Kumar (116* off 84b)",
+    "scorecard": {
+      "team1Innings": [
+        {
+          "name": "Muhammad Shahdad",
+          "dismissal": "c Monank b Harmeet",
+          "runs": 114,
+          "balls": 122
+        },
+        {
+          "name": "Tanish Suri (wk)",
+          "dismissal": "b Harmeet",
+          "runs": 78,
+          "balls": 67
+        },
+        {
+          "name": "Aryansh Sharma",
+          "dismissal": "c Netravalkar b Harmeet",
+          "runs": 34,
+          "balls": 32
+        },
+        {
+          "name": "Vishnu Sukumaran",
+          "dismissal": "b Netravalkar",
+          "runs": 28,
+          "balls": 24
+        },
+        {
+          "name": "Rahul Chopra (c)",
+          "dismissal": "c Milind b van Schalkwyk",
+          "runs": 22,
+          "balls": 19
+        },
+        {
+          "name": "Basil Hameed",
+          "dismissal": "c & b Harmeet",
+          "runs": 19,
+          "balls": 15
+        },
+        {
+          "name": "Ali Naseer",
+          "dismissal": "not out",
+          "runs": 16,
+          "balls": 12
+        },
+        {
+          "name": "Aayan Afzal Khan",
+          "dismissal": "run out (Aaron Jones)",
+          "runs": 8,
+          "balls": 6
+        },
+        {
+          "name": "Junaid Siddique",
+          "dismissal": "not out",
+          "runs": 4,
+          "balls": 3
+        }
+      ],
+      "team1Bowling": [
+        {
+          "bowler": "Harmeet Singh",
+          "overs": "10.0",
+          "maidens": "0",
+          "runs": "65",
+          "wickets": "4",
+          "econ": "6.50"
+        },
+        {
+          "bowler": "Saurabh Netravalkar",
+          "overs": "10.0",
+          "maidens": "1",
+          "runs": "58",
+          "wickets": "2",
+          "econ": "5.80"
+        },
+        {
+          "bowler": "Shadley van Schalkwyk",
+          "overs": "9.0",
+          "maidens": "0",
+          "runs": "54",
+          "wickets": "1",
+          "econ": "6.00"
+        },
+        {
+          "bowler": "Jasdeep Singh",
+          "overs": "8.0",
+          "maidens": "0",
+          "runs": "62",
+          "wickets": "0",
+          "econ": "7.75"
+        },
+        {
+          "bowler": "Nosthush Kenjige",
+          "overs": "10.0",
+          "maidens": "0",
+          "runs": "68",
+          "wickets": "0",
+          "econ": "6.80"
+        },
+        {
+          "bowler": "Milind Kumar",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "21",
+          "wickets": "0",
+          "econ": "7.00"
+        }
+      ],
+      "team2Innings": [
+        {
+          "name": "Milind Kumar",
+          "dismissal": "not out",
+          "runs": 116,
+          "balls": 84
+        },
+        {
+          "name": "Shubham Ranjane",
+          "dismissal": "c Suri b Junaid",
+          "runs": 57,
+          "balls": 52
+        },
+        {
+          "name": "Saiteja Mukkamalla",
+          "dismissal": "b Basil Hameed",
+          "runs": 56,
+          "balls": 61
+        },
+        {
+          "name": "Monank Patel (c & wk)",
+          "dismissal": "c Shahdad b Junaid",
+          "runs": 38,
+          "balls": 41
+        },
+        {
+          "name": "Smit Patel",
+          "dismissal": "b Aayan Khan",
+          "runs": 31,
+          "balls": 29
+        },
+        {
+          "name": "Aaron Jones",
+          "dismissal": "not out",
+          "runs": 24,
+          "balls": 26
+        }
+      ],
+      "team2Bowling": [
+        {
+          "bowler": "Junaid Siddique",
+          "overs": "9.5",
+          "maidens": "0",
+          "runs": "62",
+          "wickets": "2",
+          "econ": "6.30"
+        },
+        {
+          "bowler": "Basil Hameed",
+          "overs": "9.0",
+          "maidens": "0",
+          "runs": "54",
+          "wickets": "1",
+          "econ": "6.00"
+        },
+        {
+          "bowler": "Aayan Afzal Khan",
+          "overs": "10.0",
+          "maidens": "0",
+          "runs": "58",
+          "wickets": "1",
+          "econ": "5.80"
+        },
+        {
+          "bowler": "Ali Naseer",
+          "overs": "8.0",
+          "maidens": "0",
+          "runs": "55",
+          "wickets": "0",
+          "econ": "6.88"
+        },
+        {
+          "bowler": "Muhammad Jawadullah",
+          "overs": "8.0",
+          "maidens": "0",
+          "runs": "60",
+          "wickets": "0",
+          "econ": "7.50"
+        },
+        {
+          "bowler": "Vishnu Sukumaran",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "41",
+          "wickets": "0",
+          "econ": "10.25"
+        }
+      ],
+      "summary": "Milind Kumar's magnificent unbeaten 116* off 84 balls led the USA to chase down 331 against UAE at Grand Prairie Stadium to win by 6 wickets."
+    }
+  },
+  {
+    "id": "recent-banch-engch-wcl",
+    "country": "England & Bangladesh",
+    "format": "T20",
+    "series": "6th Match • World Championship of Legends",
+    "date": "05 Oct 2026",
+    "venue": "Sharjah Cricket Stadium, Sharjah",
+    "result": "England Champions won by 7 wkts",
+    "winnerName": "England Champions",
+    "loserName": "Bangladesh Champions",
+    "team1": {
+      "name": "Bangladesh Champions",
+      "score": "164-9",
+      "overs": "20.0",
+      "isWinner": false
+    },
+    "team2": {
+      "name": "England Champions",
+      "score": "166-3",
+      "overs": "16.1",
+      "isWinner": true
+    },
+    "potm": "Ravi Bopara (50* off 28b & 1/18)",
+    "scorecard": {
+      "team1Innings": [
+        {
+          "name": "Rony Talukdar",
+          "dismissal": "c Mustard b Patel",
+          "runs": 44,
+          "balls": 30
+        },
+        {
+          "name": "Al-Amin Hossain",
+          "dismissal": "not out",
+          "runs": 31,
+          "balls": 19
+        },
+        {
+          "name": "Mohammad Ashraful",
+          "dismissal": "c Bell b Sidebottom",
+          "runs": 24,
+          "balls": 18
+        },
+        {
+          "name": "Imrul Kayes",
+          "dismissal": "b Patel",
+          "runs": 18,
+          "balls": 14
+        },
+        {
+          "name": "Naeem Islam",
+          "dismissal": "c Pietersen b Bopara",
+          "runs": 15,
+          "balls": 13
+        },
+        {
+          "name": "Nadif Chowdhury",
+          "dismissal": "b Patel",
+          "runs": 11,
+          "balls": 9
+        },
+        {
+          "name": "Elias Sunny",
+          "dismissal": "c Tremlett b Sidebottom",
+          "runs": 8,
+          "balls": 6
+        },
+        {
+          "name": "Abu Jayed",
+          "dismissal": "c Bell b Tremlett",
+          "runs": 4,
+          "balls": 5
+        },
+        {
+          "name": "Abdur Razzak",
+          "dismissal": "b Patel",
+          "runs": 3,
+          "balls": 4
+        },
+        {
+          "name": "Sohrawardi Shuvo",
+          "dismissal": "run out",
+          "runs": 2,
+          "balls": 2
+        }
+      ],
+      "team1Bowling": [
+        {
+          "bowler": "Samit Patel",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "25",
+          "wickets": "4",
+          "econ": "6.25"
+        },
+        {
+          "bowler": "Ryan Sidebottom",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "28",
+          "wickets": "2",
+          "econ": "7.00"
+        },
+        {
+          "bowler": "Ravi Bopara",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "18",
+          "wickets": "1",
+          "econ": "6.00"
+        },
+        {
+          "bowler": "Chris Tremlett",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "32",
+          "wickets": "1",
+          "econ": "8.00"
+        },
+        {
+          "bowler": "Chris Schofield",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "31",
+          "wickets": "0",
+          "econ": "10.33"
+        },
+        {
+          "bowler": "Owais Shah",
+          "overs": "2.0",
+          "maidens": "0",
+          "runs": "28",
+          "wickets": "0",
+          "econ": "14.00"
+        }
+      ],
+      "team2Innings": [
+        {
+          "name": "Ravi Bopara",
+          "dismissal": "not out",
+          "runs": 50,
+          "balls": 28
+        },
+        {
+          "name": "Kevin Pietersen",
+          "dismissal": "c Ashraful b Jayed",
+          "runs": 38,
+          "balls": 22
+        },
+        {
+          "name": "Ian Bell",
+          "dismissal": "b Razzak",
+          "runs": 34,
+          "balls": 25
+        },
+        {
+          "name": "Phil Mustard (wk)",
+          "dismissal": "c Talukdar b Shuvo",
+          "runs": 25,
+          "balls": 15
+        },
+        {
+          "name": "Owais Shah",
+          "dismissal": "not out",
+          "runs": 14,
+          "balls": 7
+        }
+      ],
+      "team2Bowling": [
+        {
+          "bowler": "Abu Jayed",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "26",
+          "wickets": "1",
+          "econ": "8.67"
+        },
+        {
+          "bowler": "Abdur Razzak",
+          "overs": "3.1",
+          "maidens": "0",
+          "runs": "31",
+          "wickets": "1",
+          "econ": "9.79"
+        },
+        {
+          "bowler": "Sohrawardi Shuvo",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "29",
+          "wickets": "1",
+          "econ": "9.67"
+        },
+        {
+          "bowler": "Elias Sunny",
+          "overs": "3.0",
+          "maidens": "0",
+          "runs": "35",
+          "wickets": "0",
+          "econ": "11.67"
+        },
+        {
+          "bowler": "Al-Amin Hossain",
+          "overs": "4.0",
+          "maidens": "0",
+          "runs": "43",
+          "wickets": "0",
+          "econ": "10.75"
+        }
+      ],
+      "summary": "Samit Patel took 4/25 before Ravi Bopara's unbeaten 50* and Kevin Pietersen's 38 sealed an emphatic 7-wicket victory in 16.1 overs for England Champions."
+    }
+  }
+]

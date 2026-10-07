@@ -1,0 +1,21 @@
+{
+  "name": "cricpulse-cricket-hub",
+  "version": "1.0.0",
+  "description": "Live Cricket Analytics, Cricbuzz-Style Expandable Scorecards, ICC Rankings & IPL Central",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cricket",
+    "live-scores",
+    "cricbuzz",
+    "ipl",
+    "icc-rankings"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
